@@ -2,25 +2,24 @@
 
 import { motion } from "framer-motion";
 import { LineChart, Brain } from "lucide-react";
-import GrowthChart from "./GrowthChart";
 import { IconLayoutDashboardFilled } from "@tabler/icons-react";
 import Link from 'next/link';
 
 const features = [
   {
-    icon: <LineChart className="w-12 h-12 text-primary mb-4" />,
+    icon: <LineChart className="w-6 h-6 text-black" />,
     title: "Automatic Portfolio Tracking",
     description: "Aggregate your investments from multiple platforms effortlessly.",
     link: "/portfolio",
   },
   {
-    icon: <Brain className="w-12 h-12 text-primary mb-4" />,
+    icon: <Brain className="w-6 h-6 text-black" />,
     title: "Smart AI Comparison",
     description: "Compare mutual funds & stocks with graphical representation.",
     link: "/charts",
   },
   {
-    icon: <IconLayoutDashboardFilled className="w-12 h-12 text-primary mb-4" />,
+    icon: <IconLayoutDashboardFilled className="w-6 h-6 text-black" />,
     title: "Unified Dashboard",
     description: "Track and execute trades from one centralized location.",
     link: "/portfolio/details",
@@ -29,18 +28,18 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-24 relative overflow-hidden" id="features">
+    <section className="py-24 bg-black" id="features">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-black bg-clip-text"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-yellow-500"
         >
           What Makes Us Special?
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-10">
           {features.map((feature, index) => {
             const CardContent = (
               <motion.div
@@ -49,14 +48,18 @@ export default function Features() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-black/50 backdrop-blur-lg p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-colors cursor-pointer"
+                whileHover={{ scale: 1.03 }}
+                className="group p-8 rounded-xl border border-yellow-500/20 hover:border-yellow-500/60 transition-all duration-300 bg-black shadow-md hover:shadow-lg cursor-pointer"
               >
-                {feature.icon}
-                <h3 id={`feature-title-${index}`} className="text-xl font-semibold mb-2">
+                <div className="flex justify-center mb-6">
+                  <div className="bg-yellow-500 rounded-full p-4 flex items-center justify-center">
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-2xl font-semibold text-center text-white mb-3 group-hover:text-yellow-500 transition-colors">
                   {feature.title}
                 </h3>
-                <p aria-labelledby={`feature-title-${index}`} className="text-light/70">
+                <p className="text-center text-gray-400">
                   {feature.description}
                 </p>
               </motion.div>
@@ -71,12 +74,11 @@ export default function Features() {
             );
           })}
         </div>
-
-       
       </div>
     </section>
   );
 }
+
 
 
 
