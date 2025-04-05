@@ -59,7 +59,7 @@ const AuthForms = () => {
     try {
       const response = await axios.post(`${baseURL}/signup`, signupData);
       Cookies.set("authToken", response.data.token, { expires: 7 });
-      router.push("/dashboard");
+      router.push(`/dashboard/${response.data.userId}`);
     } catch (err) {
       setSignupError(
         err.response?.data?.message || "Something went wrong. Please try again."
@@ -76,11 +76,15 @@ const AuthForms = () => {
 
     try {
       const response = await axios.post(`${baseURL}/signin`, loginData);
-      Cookies.set("authToken", response.data.token, { expires: 7 });
-      router.push("/dashboard");
+
+      const { token, userId } = response.data; // ✅ fixed here
+      Cookies.set("authToken", token, { expires: 7 });
+
+      router.push(`/dashboard/${userId}`); // ✅ fixed here
     } catch (err) {
       setLoginError(
-        err.response?.data?.message || "Invalid email or password. Please try again."
+        err.response?.data?.message ||
+          "Invalid email or password. Please try again."
       );
     } finally {
       setLoginLoading(false);
@@ -109,6 +113,7 @@ const AuthForms = () => {
           </TabsTrigger>
         </TabsList>
 
+        {/* Sign Up Form */}
         <TabsContent value="signup">
           <Card className="bg-black text-white border border-gray-700">
             <CardHeader>
@@ -122,7 +127,10 @@ const AuthForms = () => {
 
             <CardContent>
               {signupError && (
-                <Alert variant="destructive" className="mb-4 bg-red-500/20 text-red-400 border-red-400">
+                <Alert
+                  variant="destructive"
+                  className="mb-4 bg-red-500/20 text-red-400 border-red-400"
+                >
                   <AlertDescription>{signupError}</AlertDescription>
                 </Alert>
               )}
@@ -215,6 +223,7 @@ const AuthForms = () => {
           </Card>
         </TabsContent>
 
+        {/* Login Form */}
         <TabsContent value="login">
           <Card className="bg-black text-white border border-gray-700">
             <CardHeader>
@@ -228,7 +237,10 @@ const AuthForms = () => {
 
             <CardContent>
               {loginError && (
-                <Alert variant="destructive" className="mb-4 bg-red-500/20 text-red-400 border-red-400">
+                <Alert
+                  variant="destructive"
+                  className="mb-4 bg-red-500/20 text-red-400 border-red-400"
+                >
                   <AlertDescription>{loginError}</AlertDescription>
                 </Alert>
               )}
@@ -299,4 +311,3 @@ const AuthForms = () => {
 };
 
 export default AuthForms;
-
