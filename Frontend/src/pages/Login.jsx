@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Eye, EyeOff, Mail, Lock, Apple } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Eye, EyeOff, Mail, Lock, Apple } from "lucide-react";
 
+const BASE_URL = process.env.PUBLIC_API_KEY;
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [message, setMessage] = useState("");
 
   return (
     <div className="min-h-screen pt-16 flex items-center justify-center p-4 text-white">
@@ -38,12 +47,19 @@ export default function Login() {
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300"
             >
-              {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+              {showPassword ? (
+                <EyeOff className="h-5 w-5" />
+              ) : (
+                <Eye className="h-5 w-5" />
+              )}
             </button>
           </div>
 
           <div className="flex justify-end">
-            <Link to="/forgot-password" className="text-sm text-[#FFD700] hover:text-[#FFA500] transition-colors">
+            <Link
+              to="/forgot-password"
+              className="text-sm text-[#FFD700] hover:text-[#FFA500] transition-colors"
+            >
               Forgot Password?
             </Link>
           </div>
@@ -61,13 +77,19 @@ export default function Login() {
               <div className="w-full border-t border-gray-600"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-[#0A0A0A] text-gray-400">Or continue with</span>
+              <span className="px-2 bg-[#0A0A0A] text-gray-400">
+                Or continue with
+              </span>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <button className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-colors">
-              <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png" alt="Google" className="h-5" />
+              <img
+                src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png"
+                alt="Google"
+                className="h-5"
+              />
             </button>
             <button className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-colors">
               <Apple className="h-5 w-5" />
@@ -75,8 +97,11 @@ export default function Login() {
           </div>
 
           <p className="text-center text-gray-400 text-sm">
-            Don't have an account?{' '}
-            <Link to="/signup" className="text-[#FFD700] hover:text-[#FFA500] transition-colors">
+            Don't have an account?{" "}
+            <Link
+              to="/signup"
+              className="text-[#FFD700] hover:text-[#FFA500] transition-colors"
+            >
               Sign Up
             </Link>
           </p>
