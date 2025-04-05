@@ -11,7 +11,7 @@ const steps = [
     title: 'Sign Up & Get Started',
     description:
       'Create your account in minutes, verify details & securely link your brokerage for seamless investment experience.',
-    link: '/signup',
+    link: '/login',
   },
   {
     icon: Brain,

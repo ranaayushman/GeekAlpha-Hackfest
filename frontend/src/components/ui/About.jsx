@@ -76,7 +76,7 @@ function ValueCard({ value, delay, router }) {
       transition={{ delay, duration: 0.6, ease: "easeOut" }}
       whileHover={{ scale: 1.04 }}
       onClick={handleClick}
-      className="group bg-neutral-900 p-8 rounded-2xl border border-yellow-400/20 hover:border-yellow-400/60 transition-all duration-300 shadow-md hover:shadow-yellow-400/10 cursor-pointer"
+      className="group bg-black p-8 rounded-2xl border border-yellow-400/20 hover:border-yellow-400/60 transition-all duration-300 shadow-md hover:shadow-yellow-400/10 cursor-pointer"
     >
       <div className="flex justify-center mb-6">
         <div className="bg-yellow-400 rounded-full p-4 flex items-center justify-center group-hover:scale-110 transition-transform">
