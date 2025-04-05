@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const features = [
   {
-    icon: <LineChart className="w-6 h-6 text-black" />,
+    icon: <LineChart className="w-6 h-6 text-black"  />,
     title: 'Automatic Portfolio Tracking',
     description: 'Aggregate your investments from multiple platforms effortlessly.',
     link: '/portfolio',
