@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from "framer-motion";
 import { Target, Shield, Users } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation"; // ✅ Correct import for Next.js!
 
 const values = [
   {
@@ -27,24 +29,24 @@ const values = [
 ];
 
 export default function About() {
-  const navigate = useNavigate();
+  const router = useRouter(); // ✅ useRouter instead of useNavigate
 
   return (
     <section className="py-24 bg-black/30" id="about">
       <div className="container mx-auto px-4">
-        
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-gold text-transparent bg-clip-text"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-gold bg-black text-transparent bg-clip-text"
         >
           About Us
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <ValueCard key={index} value={value} delay={index * 0.2} navigate={navigate} />
+            <ValueCard key={index} value={value} delay={index * 0.2} router={router} />
           ))}
         </div>
       </div>
@@ -53,7 +55,7 @@ export default function About() {
 }
 
 // Reusable Card Component
-function ValueCard({ value, delay, navigate }) {
+function ValueCard({ value, delay, router }) {
   const handleClick = () => {
     if (value.link.startsWith("#")) {
       const section = document.querySelector(value.link);
@@ -61,7 +63,7 @@ function ValueCard({ value, delay, navigate }) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      navigate(value.link);
+      router.push(value.link); // ✅ use router.push for internal routes
     }
   };
 

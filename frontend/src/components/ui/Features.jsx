@@ -1,15 +1,17 @@
+'use client';
+
 import { motion } from "framer-motion";
 import { LineChart, Brain } from "lucide-react";
 import GrowthChart from "./GrowthChart";
 import { IconLayoutDashboardFilled } from "@tabler/icons-react";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import Link from 'next/link';
 
 const features = [
   {
     icon: <LineChart className="w-12 h-12 text-primary mb-4" />,
     title: "Automatic Portfolio Tracking",
     description: "Aggregate your investments from multiple platforms effortlessly.",
-    link: "/portfolio", // ✅ Route to /portfolio
+    link: "/portfolio",
   },
   {
     icon: <Brain className="w-12 h-12 text-primary mb-4" />,
@@ -20,8 +22,8 @@ const features = [
   {
     icon: <IconLayoutDashboardFilled className="w-12 h-12 text-primary mb-4" />,
     title: "Unified Dashboard",
-    description: "Track and execute trades from one centralised location.",
-    link: "/portfolio/details", // ✅ Route to PortfolioDetails
+    description: "Track and execute trades from one centralized location.",
+    link: "/portfolio/details",
   },
 ];
 
@@ -33,7 +35,7 @@ export default function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-gold text-transparent bg-clip-text"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-black bg-clip-text"
         >
           What Makes Us Special?
         </motion.h2>
@@ -61,7 +63,7 @@ export default function Features() {
             );
 
             return feature.link ? (
-              <Link to={feature.link} key={index}>
+              <Link href={feature.link} key={index}>
                 {CardContent}
               </Link>
             ) : (
@@ -70,9 +72,7 @@ export default function Features() {
           })}
         </div>
 
-        <div className="h-[400px] w-full max-w-[800px] mx-auto">
-          <GrowthChart />
-        </div>
+       
       </div>
     </section>
   );
