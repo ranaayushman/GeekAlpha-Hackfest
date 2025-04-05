@@ -12,7 +12,7 @@ const Page = () => {
   const [error, setError] = useState(null);
 
   const INVST_API_URL = process.env.NEXT_PUBLIC_API_INVESTMENTS_URL;
-  // Fetch investments when the component mounts or userId changes G
+  // Fetch investments when the component mounts or userId changes G  
   useEffect(() => {
     const fetchInvestments = async () => {
       const token = Cookies.get('authToken'); // 👈 Grab token from cookies   
