@@ -1,153 +1,290 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import axios from 'axios';
-import Cookies from 'js-cookie';
-import { useRouter } from 'next/navigation';
+import React, { useState } from "react";
+import axios from "axios";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { ReloadIcon } from "@radix-ui/react-icons";
 
 const baseURL = process.env.NEXT_PUBLIC_API_USER_URL;
 
-
-const SignupForm = () => {
+const AuthForms = () => {
   const router = useRouter();
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-  });
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState("signup");
 
-  const handleChange = (e) => {
+  const [signupData, setSignupData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [signupError, setSignupError] = useState("");
+  const [signupLoading, setSignupLoading] = useState(false);
+
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  const [loginError, setLoginError] = useState("");
+  const [loginLoading, setLoginLoading] = useState(false);
+
+  const handleSignupChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setSignupData({ ...signupData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleLoginChange = (e) => {
+    const { name, value } = e.target;
+    setLoginData({ ...loginData, [name]: value });
+  };
+
+  const handleSignupSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-    setLoading(true);
+    setSignupError("");
+    setSignupLoading(true);
 
     try {
-      // Replace with your actual API endpoint
-      const response = await axios.post(`${baseURL}/signup`, formData);
-      
-      // Store the auth token in a cookie
-      Cookies.set('authToken', response.data.token, { expires: 7 }); // Expires in 7 days
-      
-      // Redirect to dashboard using Next.js router
-      router.push('/dashboard');
+      const response = await axios.post(`${baseURL}/signup`, signupData);
+      Cookies.set("authToken", response.data.token, { expires: 7 });
+      router.push("/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || 'Something went wrong. Please try again.');
+      setSignupError(
+        err.response?.data?.message || "Something went wrong. Please try again."
+      );
     } finally {
-      setLoading(false);
+      setSignupLoading(false);
+    }
+  };
+
+  const handleLoginSubmit = async (e) => {
+    e.preventDefault();
+    setLoginError("");
+    setLoginLoading(true);
+
+    try {
+      const response = await axios.post(`${baseURL}/signin`, loginData);
+      Cookies.set("authToken", response.data.token, { expires: 7 });
+      router.push("/dashboard");
+    } catch (err) {
+      setLoginError(
+        err.response?.data?.message ||
+          "Invalid email or password. Please try again."
+      );
+    } finally {
+      setLoginLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Create your account
-          </h2>
-        </div>
-        
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-            <span className="block sm:inline">{error}</span>
-          </div>
-        )}
-        
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
-            <div className="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
-              <div>
-                <label htmlFor="firstName" className="sr-only">First Name</label>
-                <input
-                  id="firstName"
-                  name="firstName"
-                  type="text"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="First Name"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="lastName" className="sr-only">Last Name</label>
-                <input
-                  id="lastName"
-                  name="lastName"
-                  type="text"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="sr-only">Email address</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="password" className="sr-only">Password</label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="new-password"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
+    <div className="flex min-h-screen items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <Tabs
+        defaultValue={activeTab}
+        className="w-full max-w-md"
+        onValueChange={setActiveTab}
+      >
+        <TabsList className="grid w-full grid-cols-2 mb-6">
+          <TabsTrigger value="signup">Sign Up</TabsTrigger>
+          <TabsTrigger value="login">Login</TabsTrigger>
+        </TabsList>
 
-          <div>
-            <button
-              type="submit"
-              disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-indigo-400"
-            >
-              {loading ? (
-                <span className="flex items-center">
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Processing...
-                </span>
-              ) : (
-                'Sign up'
+        <TabsContent value="signup">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">Create an account</CardTitle>
+              <CardDescription>
+                Enter your information to create a new account
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent>
+              {signupError && (
+                <Alert variant="destructive" className="mb-4">
+                  <AlertDescription>{signupError}</AlertDescription>
+                </Alert>
               )}
-            </button>
-          </div>
-        </form>
-      </div>
+
+              <form onSubmit={handleSignupSubmit}>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={signupData.firstName}
+                      onChange={handleSignupChange}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      required
+                      value={signupData.lastName}
+                      onChange={handleSignupChange}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2 mb-4">
+                  <Label htmlFor="signup-email">Email</Label>
+                  <Input
+                    id="signup-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={signupData.email}
+                    onChange={handleSignupChange}
+                  />
+                </div>
+
+                <div className="space-y-2 mb-6">
+                  <Label htmlFor="signup-password">Password</Label>
+                  <Input
+                    id="signup-password"
+                    name="password"
+                    type="password"
+                    autoComplete="new-password"
+                    required
+                    value={signupData.password}
+                    onChange={handleSignupChange}
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={signupLoading}
+                >
+                  {signupLoading ? (
+                    <>
+                      <ReloadIcon className="mr-2 h-4 w-4" />
+                      Creating account...
+                    </>
+                  ) : (
+                    "Create account"
+                  )}
+                </Button>
+              </form>
+            </CardContent>
+
+            <CardFooter className="flex justify-center border-t p-4">
+              <p className="text-sm text-gray-600">
+                Already have an account?{" "}
+                <button
+                  type="button"
+                  className="text-indigo-600 hover:text-indigo-800 font-medium"
+                  onClick={() => setActiveTab("login")}
+                >
+                  Log in
+                </button>
+              </p>
+            </CardFooter>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="login">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">Welcome back</CardTitle>
+              <CardDescription>
+                Enter your credentials to access your account
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent>
+              {loginError && (
+                <Alert variant="destructive" className="mb-4">
+                  <AlertDescription>{loginError}</AlertDescription>
+                </Alert>
+              )}
+
+              <form onSubmit={handleLoginSubmit}>
+                <div className="space-y-2 mb-4">
+                  <Label htmlFor="login-email">Email</Label>
+                  <Input
+                    id="login-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={loginData.email}
+                    onChange={handleLoginChange}
+                  />
+                </div>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="login-password">Password</Label>
+                    <button
+                      type="button"
+                      className="text-sm text-indigo-600 hover:text-indigo-800"
+                    >
+                      Forgot password?
+                    </button>
+                  </div>
+                  <Input
+                    id="login-password"
+                    name="password"
+                    type="password"
+                    autoComplete="current-password"
+                    required
+                    value={loginData.password}
+                    onChange={handleLoginChange}
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={loginLoading}
+                >
+                  {loginLoading ? (
+                    <>
+                      <ReloadIcon className="mr-2 h-4 w-4" />
+                      Logging in...
+                    </>
+                  ) : (
+                    "Log in"
+                  )}
+                </Button>
+              </form>
+            </CardContent>
+
+            <CardFooter className="flex justify-center border-t p-4">
+              <p className="text-sm text-gray-600">
+                Don't have an account?{" "}
+                <button
+                  type="button"
+                  className="text-indigo-600 hover:text-indigo-800 font-medium"
+                  onClick={() => setActiveTab("signup")}
+                >
+                  Sign up
+                </button>
+              </p>
+            </CardFooter>
+          </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };
 
-export default SignupForm;
+export default AuthForms;
