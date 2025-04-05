@@ -10,10 +10,12 @@ const {
   getChartData,
 } = require("../controllers/investment.controller");
 const { userMiddleware } = require("../middlewares/user.middlewares");
+const mongoose = require("mongoose");
 
 const router = express.Router();
 
-router.get("/", userMiddleware, getUserInvestments);
+router.get("/user/:userId", userMiddleware, getUserInvestments);
+
 router.post("/", userMiddleware, addInvestment);
 router.get("/holdings", userMiddleware, getAggregatedHoldings);
 router.post("/connect", userMiddleware, connectInvestmentAccount);

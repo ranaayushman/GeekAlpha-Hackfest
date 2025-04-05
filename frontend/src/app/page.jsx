@@ -58,8 +58,9 @@ const AuthForms = () => {
 
     try {
       const response = await axios.post(`${baseURL}/signup`, signupData);
-      Cookies.set("authToken", response.data.token, { expires: 7 });
-      router.push("/dashboard");
+      const { token, userId } = response.data;
+      Cookies.set("authToken", token, { expires: 7 });
+      router.push(`/dashboard/${userId}`);
     } catch (err) {
       setSignupError(
         err.response?.data?.message || "Something went wrong. Please try again."
@@ -76,8 +77,9 @@ const AuthForms = () => {
 
     try {
       const response = await axios.post(`${baseURL}/signin`, loginData);
-      Cookies.set("authToken", response.data.token, { expires: 7 });
-      router.push("/dashboard");
+      const { token, userId } = response.data;
+      Cookies.set("authToken", token, { expires: 7 });
+      router.push(`/dashboard/${userId}`);
     } catch (err) {
       setLoginError(
         err.response?.data?.message ||
@@ -100,6 +102,7 @@ const AuthForms = () => {
           <TabsTrigger value="login">Login</TabsTrigger>
         </TabsList>
 
+        {/* Signup Tab */}
         <TabsContent value="signup">
           <Card>
             <CardHeader>
@@ -200,6 +203,7 @@ const AuthForms = () => {
           </Card>
         </TabsContent>
 
+        {/* Login Tab */}
         <TabsContent value="login">
           <Card>
             <CardHeader>
