@@ -82,13 +82,13 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" aria-label="Customer testimonials" className="py-24">
+    <section id="testimonials" aria-label="Customer testimonials" className="py-24 bg-black text-white">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-gold bg-black text-transparent bg-clip-text"
+          className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-yellow-400 tracking-tight"
         >
           What Our Users Say
         </motion.h2>
@@ -97,7 +97,7 @@ export default function Testimonials() {
           <button
             onClick={() => goToTestimonial(currentIndex - 1)}
             aria-label="Previous testimonial"
-            className="absolute left-0 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition"
+            className="absolute left-0 z-10 p-2 bg-black/50 text-white rounded-full hover:text-yellow-400 hover:bg-black/70 transition"
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
@@ -110,10 +110,10 @@ export default function Testimonials() {
               initial="enter"
               animate="center"
               exit="exit"
-              className="absolute inset-0 bg-black/50 backdrop-blur-lg p-8 md:p-12 rounded-2xl border border-primary/10 flex flex-col justify-between"
+              className="absolute inset-0 bg-black/80 backdrop-blur-lg p-8 md:p-12 rounded-2xl border border-white/10 flex flex-col justify-between"
             >
-              <Quote className="w-12 h-12 text-primary mb-6" aria-hidden="true" />
-              <blockquote className="text-xl md:text-2xl mb-8 flex-grow">
+              <Quote className="w-12 h-12 text-yellow-400 mb-6" aria-hidden="true" />
+              <blockquote className="text-xl md:text-2xl mb-8 flex-grow text-white">
                 {testimonials[currentIndex].quote}
               </blockquote>
               <div className="flex items-center gap-4">
@@ -126,8 +126,8 @@ export default function Testimonials() {
                   loading="lazy"
                 />
                 <div>
-                  <h4 className="font-semibold">{testimonials[currentIndex].name}</h4>
-                  <p className="text-light/70">{testimonials[currentIndex].role}</p>
+                  <h4 className="font-semibold text-white hover:text-yellow-400 transition">{testimonials[currentIndex].name}</h4>
+                  <p className="text-white/70">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </motion.div>
@@ -136,7 +136,7 @@ export default function Testimonials() {
           <button
             onClick={() => goToTestimonial(currentIndex + 1)}
             aria-label="Next testimonial"
-            className="absolute right-0 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition"
+            className="absolute right-0 z-10 p-2 bg-black/50 text-white rounded-full hover:text-yellow-400 hover:bg-black/70 transition"
           >
             <ChevronRight className="w-8 h-8" />
           </button>
@@ -145,4 +145,5 @@ export default function Testimonials() {
     </section>
   );
 }
+
 
