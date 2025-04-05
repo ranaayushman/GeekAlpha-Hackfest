@@ -1,7 +1,9 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image"; // Next.js Image component
 
 const teamMembers = [
   {
@@ -9,7 +11,6 @@ const teamMembers = [
     name: "Riya Singh",
     role: "UI/UX Designer",
     imgSrc: "/assets/riya.jpeg",
-    // bio: 'Former Goldman Sachs executive with 15+ years of experience in fintech and algorithmic trading.',
     quote:
       "Simple, intuitive design is the key to making finance accessible to everyone.",
   },
@@ -18,7 +19,6 @@ const teamMembers = [
     name: "Gurdeep Singh",
     role: "Machine Learning Expert",
     imgSrc: "/assets/gurd.jpeg",
-    // bio: 'Ex-Google AI researcher specializing in machine learning and financial forecasting models.',
     quote:
       "We're engineering the future of finance, where every algorithm is a step toward smarter investing.",
   },
@@ -27,7 +27,6 @@ const teamMembers = [
     name: "Abhishek Kumar",
     role: "Backend Developer",
     imgSrc: "/assets/abhi.jpeg",
-    // bio: 'Product veteran from Stripe with deep expertise in fintech UX and customer experience.',
     quote:
       "Our code doesn’t just run servers; it powers experiences, scales ideas, and keeps the digital world in motion.",
   },
@@ -36,7 +35,6 @@ const teamMembers = [
     name: "Ayushman Rana",
     role: "Backend Developer",
     imgSrc: "/assets/ayus.jpeg",
-    // bio: 'Product veteran from Stripe with deep expertise in fintech UX and customer experience.',
     quote:
       "Great backends are like great foundations—you don’t see them, but they hold everything together.",
   },
@@ -45,7 +43,6 @@ const teamMembers = [
     name: "Prem Ranjan",
     role: "Frontend Developer",
     imgSrc: "/assets/rj.jpeg",
-    // bio: 'Ex-Google AI researcher specializing in machine learning and financial forecasting models.',
     quote:
       "A great frontend isn’t just code—it’s the art of making complexity look effortless.",
   },
@@ -77,9 +74,8 @@ const Team = () => {
 
   const paginate = (newDirection) => {
     setDirection(newDirection);
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex + newDirection + teamMembers.length) % teamMembers.length
+    setCurrentIndex((prevIndex) => 
+      (prevIndex + newDirection + teamMembers.length) % teamMembers.length
     );
   };
 
@@ -133,13 +129,16 @@ const Team = () => {
               }}
               className="absolute w-full max-w-4xl"
             >
-              <div className="bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-[#FFD700]/10">
+              <div className="bg-black p-8 rounded-2xl border border-[#FFD700]/10">
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative">
-                    <img
+                  <div className="relative w-full h-[400px]"> {/* Set height for Image */}
+                    <Image
                       src={teamMembers[currentIndex].imgSrc}
                       alt={teamMembers[currentIndex].name}
-                      className="w-full h-full object-cover rounded-xl"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-xl"
+                      priority
                     />
                   </div>
 
@@ -151,7 +150,7 @@ const Team = () => {
                       {teamMembers[currentIndex].role}
                     </p>
                     <p className="text-gray-400 mb-6">
-                      {teamMembers[currentIndex].bio}
+                      {/* Add more bio here if needed */}
                     </p>
                     <blockquote className="border-l-2 border-[#FFD700] pl-4 italic text-white">
                       "{teamMembers[currentIndex].quote}"
@@ -168,3 +167,4 @@ const Team = () => {
 };
 
 export default Team;
+
