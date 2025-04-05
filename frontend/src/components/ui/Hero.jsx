@@ -29,7 +29,7 @@ export default function Hero() {
             whileHover={{ scale: 0.95 }}
             whileTap={{ scale: 0.75 }}
             className="px-4 py-2 rounded-full bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black font-semibold"
-            onClick={() => router.push('/signup')} 
+            onClick={() => router.push('/login')} 
           >
             Get Started 
           </motion.button>
