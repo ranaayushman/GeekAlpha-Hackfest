@@ -5,8 +5,7 @@ import Features from '@/components/ui/Features'
 import HowItWorks from '@/components/ui/HowItWorks'
 import About from '@/components/ui/About'
 import Testimonials from '@/components/ui/Testimonials'
-
-import React from 'react'
+import Contact from '@/components/ui/Contact'
 
 const page = () => {
   return (
@@ -17,6 +16,7 @@ const page = () => {
       <HowItWorks />
       <About />
       <Testimonials />
+      <Contact />
     </div>
   )
 }

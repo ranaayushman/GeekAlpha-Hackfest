@@ -88,7 +88,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-gold text-transparent bg-clip-text"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-gold bg-black text-transparent bg-clip-text"
         >
           What Our Users Say
         </motion.h2>
