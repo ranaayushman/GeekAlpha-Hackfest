@@ -1,3 +1,4 @@
+
 "use client"
 import AuthForms from '@/components/AuthComponent'
 import Hero from '@/components/ui/Hero'
@@ -17,6 +18,7 @@ const page = () => {
       <About />
       <Testimonials />
       <Contact />
+
     </div>
   )
 }
