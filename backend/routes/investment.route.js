@@ -9,19 +9,34 @@ const {
   getPortfolioSummary,
   getChartData,
 } = require("../controllers/investment.controller");
+
 const { userMiddleware } = require("../middlewares/user.middlewares");
-const mongoose = require("mongoose");
 
 const router = express.Router();
 
-router.get("/user/:userId", userMiddleware, getUserInvestments);
+// All routes include :userId as the first param
+router.get("/:userId", userMiddleware, getUserInvestments);
 
-router.post("/", userMiddleware, addInvestment);
-router.get("/holdings", userMiddleware, getAggregatedHoldings);
-router.post("/connect", userMiddleware, connectInvestmentAccount);
-router.get("/:platformId/holdings", userMiddleware, fetchPlatformHoldings);
-router.delete("/:investmentId", userMiddleware, removeInvestment);
-router.get("/summary/live", userMiddleware, getPortfolioSummary);
-router.get("/chart-data", userMiddleware, getChartData);
+router.post("/:userId", userMiddleware, addInvestment);
+
+router.get("/:userId/holdings", userMiddleware, getAggregatedHoldings);
+
+router.post("/:userId/connect", userMiddleware, connectInvestmentAccount);
+
+router.get(
+  "/:userId/holdings/:platformId",
+  userMiddleware,
+  fetchPlatformHoldings
+);
+
+router.delete(
+  "/:userId/investments/:investmentId",
+  userMiddleware,
+  removeInvestment
+);
+
+router.get("/:userId/summary/live", userMiddleware, getPortfolioSummary);
+
+router.get("/:userId/chart-data", userMiddleware, getChartData);
 
 module.exports = router;

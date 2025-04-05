@@ -2,7 +2,7 @@ const Investment = require("../models/investment.models");
 const yahooFinance = require("yahoo-finance2").default;
 const mongoose = require("mongoose");
 
-// Helper function for consistent response format
+// Helper function
 const sendResponse = (
   res,
   status,
@@ -16,14 +16,19 @@ const sendResponse = (
     .json({ success, message, ...(data && { data }), ...(error && { error }) });
 };
 
+// Validate userId
+const isValidUserId = (res, userId) => {
+  if (!userId || !mongoose.Types.ObjectId.isValid(userId)) {
+    sendResponse(res, 400, false, "Invalid or missing userId");
+    return false;
+  }
+  return true;
+};
+
 exports.getUserInvestments = async (req, res) => {
   try {
-    const { userId } = req.params; // Extract userId from URL params
-
-    // Validate userId
-    if (!userId || !mongoose.Types.ObjectId.isValid(userId)) {
-      return sendResponse(res, 400, false, "Invalid or missing userId");
-    }
+    const { userId } = req.params;
+    if (!isValidUserId(res, userId)) return;
 
     const investments = await Investment.find({ userId })
       .lean()
@@ -85,8 +90,12 @@ exports.getUserInvestments = async (req, res) => {
     );
   }
 };
+
 exports.addInvestment = async (req, res) => {
   try {
+    const { userId } = req.params;
+    if (!isValidUserId(res, userId)) return;
+
     const {
       platform,
       type,
@@ -98,7 +107,6 @@ exports.addInvestment = async (req, res) => {
       purchasePrice,
     } = req.body;
 
-    // Basic validation
     if (!platform || !type || !name || amountInvested <= 0) {
       return sendResponse(
         res,
@@ -109,7 +117,7 @@ exports.addInvestment = async (req, res) => {
     }
 
     const newInvestment = new Investment({
-      userId: req.user.id,
+      userId,
       platform,
       type,
       name,
@@ -135,16 +143,17 @@ exports.addInvestment = async (req, res) => {
 
 exports.getAggregatedHoldings = async (req, res) => {
   try {
-    const investments = await Investment.find({ userId: req.user.id }).lean();
+    const { userId } = req.params;
+    if (!isValidUserId(res, userId)) return;
+
+    const investments = await Investment.find({ userId }).lean();
 
     if (!investments.length) {
       return sendResponse(res, 200, true, "No holdings found", {});
     }
 
     const summary = investments.reduce((acc, inv) => {
-      if (!acc[inv.platform]) {
-        acc[inv.platform] = { total: 0, assets: [] };
-      }
+      if (!acc[inv.platform]) acc[inv.platform] = { total: 0, assets: [] };
       acc[inv.platform].total += inv.currentValue;
       acc[inv.platform].assets.push(`${inv.name}: ₹${inv.currentValue}`);
       return acc;
@@ -164,6 +173,9 @@ exports.getAggregatedHoldings = async (req, res) => {
 
 exports.connectInvestmentAccount = async (req, res) => {
   try {
+    const { userId } = req.params;
+    if (!isValidUserId(res, userId)) return;
+
     const { platform, accountId } = req.body;
 
     if (!platform || !accountId) {
@@ -175,7 +187,7 @@ exports.connectInvestmentAccount = async (req, res) => {
       );
     }
 
-    console.log(`User ${req.user.id} linked ${platform} account: ${accountId}`);
+    console.log(`User ${userId} linked ${platform} account: ${accountId}`);
     sendResponse(res, 200, true, `${platform} account linked successfully`);
   } catch (err) {
     sendResponse(
@@ -191,14 +203,15 @@ exports.connectInvestmentAccount = async (req, res) => {
 
 exports.fetchPlatformHoldings = async (req, res) => {
   try {
-    const { platformId } = req.params;
+    const { userId, platformId } = req.params;
+    if (!isValidUserId(res, userId)) return;
 
     if (!platformId) {
       return sendResponse(res, 400, false, "Platform ID is required");
     }
 
     const investments = await Investment.find({
-      userId: req.user.id,
+      userId,
       platform: platformId,
     }).lean();
 
@@ -233,7 +246,8 @@ exports.fetchPlatformHoldings = async (req, res) => {
 
 exports.removeInvestment = async (req, res) => {
   try {
-    const { investmentId } = req.params;
+    const { userId, investmentId } = req.params;
+    if (!isValidUserId(res, userId)) return;
 
     if (!investmentId) {
       return sendResponse(res, 400, false, "Investment ID is required");
@@ -241,7 +255,7 @@ exports.removeInvestment = async (req, res) => {
 
     const deleted = await Investment.findOneAndDelete({
       _id: investmentId,
-      userId: req.user.id,
+      userId,
     });
 
     if (!deleted) {
@@ -268,7 +282,10 @@ exports.removeInvestment = async (req, res) => {
 
 exports.getPortfolioSummary = async (req, res) => {
   try {
-    const investments = await Investment.find({ userId: req.user.id }).lean();
+    const { userId } = req.params;
+    if (!isValidUserId(res, userId)) return;
+
+    const investments = await Investment.find({ userId }).lean();
 
     if (!investments.length) {
       return sendResponse(
@@ -335,7 +352,10 @@ exports.getPortfolioSummary = async (req, res) => {
 
 exports.getChartData = async (req, res) => {
   try {
-    const investments = await Investment.find({ userId: req.user.id }).lean();
+    const { userId } = req.params;
+    if (!isValidUserId(res, userId)) return;
+
+    const investments = await Investment.find({ userId }).lean();
 
     if (!investments.length) {
       return sendResponse(res, 200, true, "No data available for charts", {
