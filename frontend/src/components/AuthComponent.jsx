@@ -59,7 +59,7 @@ const AuthForms = () => {
     try {
       const response = await axios.post(`${baseURL}/signup`, signupData);
       Cookies.set("authToken", response.data.token, { expires: 7 });
-      router.push(`/dashboard/${response.data.userId}`);
+      router.push(`/dashboard/${userId}`);
     } catch (err) {
       setSignupError(
         err.response?.data?.message || "Something went wrong. Please try again."
