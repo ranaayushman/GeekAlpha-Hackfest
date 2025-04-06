@@ -1,18 +1,65 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Brain, TrendingUp, ShieldCheck, ArrowRight, BarChart3 } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import axios from "axios";
+import Cookies from "js-cookie"; // Import Cookies
+import { Brain, TrendingUp, ShieldCheck, ArrowRight, BarChart3 } from "lucide-react";
+
+const BASE_URL = process.env.NEXT_PUBLIC_API_MARKET_URL;
 
 const Insights = () => {
-  const [isHovered, setIsHovered] = useState('');
+  const [isHovered, setIsHovered] = useState("");
+  const [stocks, setStocks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const features = [
-    { id: 'personalized', icon: <Brain className="w-8 h-8 text-yellow-400" />, title: 'Personalized Recommendations', description: 'AI-driven stock & fund suggestions based on your risk profile and goals' },
-    { id: 'risk', icon: <ShieldCheck className="w-8 h-8 text-yellow-400" />, title: 'Risk Analysis', description: 'Advanced risk assessment with real-time market correlation analysis' },
-    { id: 'trends', icon: <TrendingUp className="w-8 h-8 text-yellow-400" />, title: 'Market Trends', description: 'Real-time market insights powered by advanced AI algorithms' },
-    { id: 'comparison', icon: <BarChart3 className="w-8 h-8 text-yellow-400" />, title: 'Smart Comparisons', description: 'Intelligent fund comparison with performance predictions' }
+    {
+      id: "personalized",
+      icon: <Brain className="w-8 h-8 text-yellow-400" />,
+      title: "Personalized Recommendations",
+      description: "AI-driven stock & fund suggestions based on your risk profile and goals",
+    },
+    {
+      id: "risk",
+      icon: <ShieldCheck className="w-8 h-8 text-yellow-400" />,
+      title: "Risk Analysis",
+      description: "Advanced risk assessment with real-time market correlation analysis",
+    },
+    {
+      id: "trends",
+      icon: <TrendingUp className="w-8 h-8 text-yellow-400" />,
+      title: "Market Trends",
+      description: "Real-time market insights powered by advanced AI algorithms",
+    },
+    {
+      id: "comparison",
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+      title: "Smart Comparisons",
+      description: "Intelligent fund comparison with performance predictions",
+    },
   ];
+
+  useEffect(() => {
+    const fetchStocks = async () => {
+      try {
+        const authToken = Cookies.get("authToken"); // Get the auth token from cookies
+        const response = await axios.get(`${BASE_URL}/stocks`, {
+          headers: {
+            Authorization: `Bearer ${authToken}`, // Include token in Authorization header
+          },
+        });
+        setStocks(response.data.stocks);
+      } catch (err) {
+        setError("Failed to fetch stock data. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStocks();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -38,10 +85,10 @@ const Insights = () => {
             <div
               key={feature.id}
               className={`p-6 rounded-xl bg-gray-800 border border-gray-700 transition-all duration-300 ${
-                isHovered === feature.id ? 'transform scale-105 border-yellow-400/50' : ''
+                isHovered === feature.id ? "transform scale-105 border-yellow-400/50" : ""
               }`}
               onMouseEnter={() => setIsHovered(feature.id)}
-              onMouseLeave={() => setIsHovered('')}
+              onMouseLeave={() => setIsHovered("")}
             >
               <div className="flex items-center mb-4">
                 {feature.icon}
@@ -52,13 +99,46 @@ const Insights = () => {
           ))}
         </div>
       </section>
+
+      {/* Real-Time Stock Data Section */}
+      <section className="px-6 lg:px-8 py-16 lg:py-24">
+        <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
+          Real-Time Market Insights
+        </h2>
+        {loading ? (
+          <p className="text-center text-gray-400">Loading stock data...</p>
+        ) : error ? (
+          <p className="text-center text-red-400">{error}</p>
+        ) : (
+          <div className="mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {stocks.map((stock) => (
+              <div
+                key={stock.symbol}
+                className="p-6 rounded-xl bg-gray-800 border border-gray-700"
+              >
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {stock.name} ({stock.symbol})
+                </h3>
+                <p className="text-gray-400 mb-1">
+                  Price: ${stock.price.toLocaleString()}
+                </p>
+                <p
+                  className={`mb-1 ${
+                    stock.change >= 0 ? "text-green-400" : "text-red-400"
+                  }`}
+                >
+                  Change: {stock.change.toFixed(2)}%
+                </p>
+                <p className="text-gray-400">
+                  Market Cap: ${(stock.marketCap / 1e9).toFixed(2)}B
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 };
 
 export default Insights;
-
-
-
-
-
