@@ -1,32 +1,44 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { LineChart, Brain } from 'lucide-react';
-import { IconLayoutDashboardFilled } from '@tabler/icons-react';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import { LineChart, Brain } from "lucide-react";
+import { IconLayoutDashboardFilled } from "@tabler/icons-react";
+import Link from "next/link";
 
 const features = [
   {
-    icon: <LineChart className="w-6 h-6 text-black"  />,
-    title: 'Automatic Portfolio Tracking',
-    description: 'Aggregate your investments from multiple platforms effortlessly.',
-    link: '/portfolio',
+    icon: <LineChart className="w-6 h-6 text-black" />,
+    title: "Automatic Portfolio Tracking",
+    description:
+      "Aggregate your investments from multiple platforms effortlessly.",
+    link: "/portfolio",
   },
   {
     icon: <Brain className="w-6 h-6 text-black" />,
-    title: 'Smart AI Comparison',
-    description: 'Compare mutual funds & stocks with graphical representation.',
-    link: '/charts',
+    title: "Smart AI Comparison",
+    description: "Compare mutual funds & stocks with graphical representation.",
+    link: "/charts",
   },
   {
     icon: <IconLayoutDashboardFilled className="w-6 h-6 text-black" />,
-    title: 'Unified Dashboard',
-    description: 'Track and execute trades from one centralized location.',
-    link: '/portfolio/details',
+    title: "Unified Dashboard",
+    description: "Track and execute trades from one centralized location.",
+    link: "/portfolio/details",
   },
 ];
 
-export default function Features() {
+export default function Features({ userId }) {
+  const getDynamicLink = (baseLink) => {
+    // If there's no userId, return the base link as is
+    if (!userId) return baseLink;
+
+    // Split the base link into segments
+    const segments = baseLink.split("/").filter(Boolean);
+
+    // For paths like "/portfolio/details", append userId
+    return `${baseLink}/${userId}`;
+  };
+
   return (
     <section className="py-24 bg-black" id="features">
       <div className="container mx-auto px-4">
@@ -66,7 +78,11 @@ export default function Features() {
             );
 
             return feature.link ? (
-              <Link href={feature.link} key={index} className="h-full">
+              <Link
+                href={getDynamicLink(feature.link)}
+                key={index}
+                className="h-full"
+              >
                 {CardContent}
               </Link>
             ) : (
@@ -80,8 +96,3 @@ export default function Features() {
     </section>
   );
 }
-
-
-
-
-

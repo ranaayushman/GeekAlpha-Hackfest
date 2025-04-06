@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Portfolio from '../Portfolio'
+import {Portfolio} from '../Portfolio'
 
 const page = () => {
   return (

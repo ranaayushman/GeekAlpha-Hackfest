@@ -32,7 +32,7 @@ const HomePage = ({ params }) => {
     <div>
       <>
         <Hero />
-        <Features />
+        <Features userId={params.userId} />
         <HowItWorks userId={params.userId} />
         <About />
         <Testimonials />
