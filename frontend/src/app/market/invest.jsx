@@ -72,7 +72,7 @@ export const Market = () => {
 
   const openSellModal = () => {
     // Check if user is logged in
-    const token = Cookies.get("auth_token");
+    const token = Cookies.get("authToken");
     if (!token) {
       alert("Please login to continue");
       // Redirect to login page or open login modal
