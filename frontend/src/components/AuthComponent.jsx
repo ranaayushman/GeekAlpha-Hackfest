@@ -58,7 +58,12 @@ const AuthForms = () => {
 
     try {
       const response = await axios.post(`${baseURL}/signup`, signupData);
-      Cookies.set("authToken", response.data.token, { expires: 7 });
+      const { token, userId } = response.data; // Added userId extraction
+
+      // Store both token and userId in cookies
+      Cookies.set("authToken", token, { expires: 7 });
+      Cookies.set("userId", userId, { expires: 7 }); // Store userId in cookie
+
       router.push(`/dashboard/${userId}`);
     } catch (err) {
       setSignupError(
@@ -76,11 +81,13 @@ const AuthForms = () => {
 
     try {
       const response = await axios.post(`${baseURL}/signin`, loginData);
+      const { token, userId } = response.data;
 
-      const { token, userId } = response.data; // ✅ fixed here
+      // Store both token and userId in cookies
       Cookies.set("authToken", token, { expires: 7 });
+      Cookies.set("userId", userId, { expires: 7 }); // Store userId in cookie
 
-      router.push(`/dashboard/${userId}`); // ✅ fixed here
+      router.push(`/dashboard/${userId}`);
     } catch (err) {
       setLoginError(
         err.response?.data?.message ||
@@ -293,7 +300,7 @@ const AuthForms = () => {
 
             <CardFooter className="flex justify-center border-t border-gray-700 p-4">
               <p className="text-sm text-gray-400">
-                Don’t Have an Account?{" "}
+                Don't Have an Account?{" "}
                 <button
                   type="button"
                   className="text-yellow-400 hover:text-yellow-500 font-medium"
