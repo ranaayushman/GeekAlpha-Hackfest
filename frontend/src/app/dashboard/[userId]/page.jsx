@@ -1,10 +1,12 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
-import Cookies from 'js-cookie';
-import axios from 'axios';
-import Holdings from './components/Holdings';
+import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
+import Cookies from "js-cookie";
+import axios from "axios";
+import Holdings from "./components/Holdings";
+import PortfolioDetails from "./components/PortfolioDetails";
+import Portfolio from "./components/Portfolio";
 const Page = () => {
   const { userId } = useParams();
   const [investments, setInvestments] = useState([]);
@@ -15,18 +17,18 @@ const Page = () => {
   // Fetch investments when the component mounts or userId changes G
   useEffect(() => {
     const fetchInvestments = async () => {
-      const token = Cookies.get('authToken'); // 👈 Grab token from cookies   
-  
+      const token = Cookies.get("authToken"); // 👈 Grab token from cookies
+
       try {
         const response = await axios.get(`${INVST_API_URL}/${userId}`, {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
         });
-  
+
         const data = response.data;
-  
+
         if (data.success) {
           setInvestments(data.data);
         } else {
@@ -38,7 +40,7 @@ const Page = () => {
         setLoading(false);
       }
     };
-  
+
     fetchInvestments();
   }, [userId]);
 
@@ -53,8 +55,10 @@ const Page = () => {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Investments for User {userId}</h1>
-      <Holdings userId = {userId} />
-      {investments.length === 0 ? (
+      {/* <Holdings userId={userId} /> */}
+      {/* <PortfolioDetails userId={userId} /> */}
+      <Portfolio userId={userId} />
+      {/* {investments.length === 0 ? (
         <p>No investments found.</p>
       ) : (
         <div className="overflow-x-auto">
@@ -75,25 +79,41 @@ const Page = () => {
             <tbody>
               {investments.map((investment) => (
                 <tr key={investment._id} className="hover:bg-gray-50">
-                  <td className="border border-gray-300 p-2">{investment.platform}</td>
-                  <td className="border border-gray-300 p-2">{investment.type}</td>
-                  <td className="border border-gray-300 p-2">{investment.name}</td>
-                  <td className="border border-gray-300 p-2">{investment.ticker || 'N/A'}</td>
-                  <td className="border border-gray-300 p-2">{investment.quantity}</td>
-                  <td className="border border-gray-300 p-2">₹{investment.amountInvested}</td>
-                  <td className="border border-gray-300 p-2">₹{investment.currentValue}</td>
                   <td className="border border-gray-300 p-2">
-                    {investment.purchasePrice ? `₹${investment.purchasePrice}` : 'N/A'}
+                    {investment.platform}
                   </td>
                   <td className="border border-gray-300 p-2">
-                    {investment.livePrice ? `₹${investment.livePrice}` : 'N/A'}
+                    {investment.type}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {investment.name}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {investment.ticker || "N/A"}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {investment.quantity}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    ₹{investment.amountInvested}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    ₹{investment.currentValue}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {investment.purchasePrice
+                      ? `₹${investment.purchasePrice}`
+                      : "N/A"}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {investment.livePrice ? `₹${investment.livePrice}` : "N/A"}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
