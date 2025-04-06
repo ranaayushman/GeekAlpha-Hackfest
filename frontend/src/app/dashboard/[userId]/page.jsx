@@ -55,7 +55,7 @@ const Page = () => {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Investments for User {userId}</h1>
-      <Holdings userId={userId} />
+      {/* <Holdings userId={userId} /> */}
       {/* <PortfolioDetails userId={userId} /> */}
       <Portfolio userId={userId} />
       {/* {investments.length === 0 ? (

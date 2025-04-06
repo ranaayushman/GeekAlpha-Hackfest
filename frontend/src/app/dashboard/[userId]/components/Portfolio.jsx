@@ -35,9 +35,10 @@ const StockChart = () => (
 );
 
 export default function Portfolio({ userId }) {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("all");  
   const [portfolioData, setPortfolioData] = useState({
     totalInvestment: 0,
+    totalCurrentValue: 0, // Added to store total current value
     brokerages: [],
   });
   const [loading, setLoading] = useState(true);
@@ -53,10 +54,14 @@ export default function Portfolio({ userId }) {
         });
 
         const investments = response.data.data;
-        
-        // Calculate total investment
+
+        // Calculate total investment and total current value
         const totalInvestment = investments.reduce(
           (sum, inv) => sum + inv.amountInvested,
+          0
+        );
+        const totalCurrentValue = investments.reduce(
+          (sum, inv) => sum + inv.currentValue,
           0
         );
 
@@ -86,20 +91,25 @@ export default function Portfolio({ userId }) {
         const brokerages = Object.entries(groupedByPlatform).map(
           ([name, stocksObj]) => ({
             name,
-            stocks: Object.values(stocksObj).map(stock => {
-              const returns = stock.invested > 0
-                ? ((stock.current - stock.invested) / stock.invested * 100).toFixed(2)
-                : 0;
+            stocks: Object.values(stocksObj).map((stock) => {
+              const returns =
+                stock.invested > 0
+                  ? (
+                      ((stock.current - stock.invested) / stock.invested) *
+                      100
+                    ).toFixed(2)
+                  : 0;
               return {
                 ...stock,
-                returns: parseFloat(returns)
+                returns: parseFloat(returns),
               };
-            })
+            }),
           })
         );
 
         setPortfolioData({
           totalInvestment,
+          totalCurrentValue,
           brokerages,
         });
       } catch (error) {
@@ -132,9 +142,12 @@ export default function Portfolio({ userId }) {
           </p>
         </div>
         <div className="text-right mt-4 md:mt-0">
-          <p className="text-sm text-gray-400">Total Investment</p>
+          <p className="text-sm text-gray-400">
+            Total Investment / Current Value
+          </p>
           <p className="text-3xl font-bold text-yellow-400">
-            ₹{portfolioData.totalInvestment.toLocaleString()}
+            ₹{portfolioData.totalInvestment.toLocaleString()} / ₹
+            {portfolioData.totalCurrentValue.toLocaleString()}
           </p>
         </div>
       </header>
@@ -177,7 +190,7 @@ export default function Portfolio({ userId }) {
               <button
                 key={b.name}
                 onClick={() => setActiveTab(b.name)}
-                className={`pb-2 px-4 text-sm whitespace-nowrap ${
+                className={`pb-2bund px-4 text-sm whitespace-nowrap ${
                   activeTab === b.name
                     ? "text-yellow-400 border-b-2 border-yellow-400"
                     : "text-gray-400"
