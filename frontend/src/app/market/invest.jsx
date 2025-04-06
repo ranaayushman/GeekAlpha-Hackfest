@@ -1,39 +1,89 @@
-"use client"
-import { IconBrandProducthunt } from '@tabler/icons-react';
-import { motion } from 'framer-motion';
-import { Zap, LineChart, Brain, TrendingUp, Shield, Users, AlertTriangle } from 'lucide-react';
-import { Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart as RechartsLineChart } from 'recharts';
+"use client";
+import { useState } from "react";
+import { IconBrandProducthunt } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import {
+  Zap,
+  LineChart,
+  Brain,
+  TrendingUp,
+  Shield,
+  Users,
+  AlertTriangle,
+} from "lucide-react";
+import {
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  LineChart as RechartsLineChart,
+} from "recharts";
+import { BuySellModal } from "./BuySellModal"; // Import the modal component
+import Cookies from "js-cookie";
 
 const data = [
-  { name: 'Jan', value: 4000 },
-  { name: 'Feb', value: 3000 },
-  { name: 'Mar', value: 5000 },
-  { name: 'Apr', value: 4800 },
-  { name: 'May', value: 6000 },
-  { name: 'Jun', value: 5500 },
+  { name: "Jan", value: 4000 },
+  { name: "Feb", value: 3000 },
+  { name: "Mar", value: 5000 },
+  { name: "Apr", value: 4800 },
+  { name: "May", value: 6000 },
+  { name: "Jun", value: 5500 },
 ];
 
 const features = [
   {
     icon: <Zap className="w-8 h-8" />,
     title: "One-Tap Investments",
-    description: "Instantly buy & sell stocks/mutual funds in one click."
+    description: "Instantly buy & sell stocks/mutual funds in one click.",
   },
   {
     icon: <LineChart className="w-8 h-8" />,
     title: "Real-Time Performance Tracking",
-    description: "Monitor portfolio growth dynamically with live AI updates."
+    description: "Monitor portfolio growth dynamically with live AI updates.",
   },
   {
     icon: <Brain className="w-8 h-8" />,
     title: "Smart Portfolio Optimization",
-    description: "AI-driven strategies to maximize returns & reduce risks."
-  }
+    description: "AI-driven strategies to maximize returns & reduce risks.",
+  },
 ];
 
-const filters = ['Stocks', 'Mutual Funds', 'ETFs', 'Fixed Deposits'];
+const filters = ["Stocks", "Mutual Funds", "ETFs", "Fixed Deposits"];
 
 export const Market = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [actionType, setActionType] = useState("buy");
+
+  const openBuyModal = () => {
+    // Check if user is logged in
+    const token = Cookies.get("authToken");
+    if (!token) {
+      alert("Please login to continue");
+      // Redirect to login page or open login modal
+      // window.location.href = "/login";
+      return;
+    }
+
+    setActionType("buy");
+    setModalOpen(true);
+  };
+
+  const openSellModal = () => {
+    // Check if user is logged in
+    const token = Cookies.get("auth_token");
+    if (!token) {
+      alert("Please login to continue");
+      // Redirect to login page or open login modal
+      // window.location.href = "/login";
+      return;
+    }
+
+    setActionType("sell");
+    setModalOpen(true);
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -53,11 +103,13 @@ export const Market = () => {
               Invest & Grow Effortlessly
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
-              Buy & sell stocks or mutual funds with a single tap, track real-time performance & optimize your portfolio seamlessly.
+              Buy & sell stocks or mutual funds with a single tap, track
+              real-time performance & optimize your portfolio seamlessly.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={openBuyModal}
               className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-4 px-8 rounded-lg text-lg shadow-lg hover:shadow-yellow-500/50 transition-all"
             >
               Start Investing
@@ -100,7 +152,9 @@ export const Market = () => {
                 className="bg-gray-900 p-6 rounded-xl border border-yellow-500/20 hover:border-yellow-500/50 transition-all"
               >
                 <div className="text-yellow-400 mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
@@ -128,7 +182,9 @@ export const Market = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 bg-gray-900 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Portfolio Performance</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Portfolio Performance
+              </h3>
               <div className="h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <RechartsLineChart data={data}>
@@ -137,9 +193,9 @@ export const Market = () => {
                     <YAxis stroke="#666" />
                     <Tooltip
                       contentStyle={{
-                        backgroundColor: '#1a1a1a',
-                        border: '1px solid #333',
-                        borderRadius: '8px',
+                        backgroundColor: "#1a1a1a",
+                        border: "1px solid #333",
+                        borderRadius: "8px",
                       }}
                     />
                     <Line
@@ -147,7 +203,7 @@ export const Market = () => {
                       dataKey="value"
                       stroke="#EAB308"
                       strokeWidth={2}
-                      dot={{ fill: '#EAB308' }}
+                      dot={{ fill: "#EAB308" }}
                     />
                   </RechartsLineChart>
                 </ResponsiveContainer>
@@ -185,20 +241,42 @@ export const Market = () => {
                 </div>
               </motion.div>
 
+              {/* Buy/Sell Button Card */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className="bg-red-900 p-6 rounded-xl"
+                className="bg-gray-900 p-6 rounded-xl"
               >
-                <h4 className="text-black-400 mb-2">Stocks/Mutual Funds</h4>
-                <div className="flex items-center space-x-2">
-                  
-                  <p className="text-2xl font-bold text-black-500"> BUY & SELL</p>
+                <h4 className="text-gray-400 mb-2">Stocks/Mutual Funds</h4>
+                <div className="flex items-center space-x-3">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={openBuyModal}
+                    className="flex-1 py-3 px-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-colors"
+                  >
+                    Buy Stock
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={openSellModal}
+                    className="flex-1 py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-colors"
+                  >
+                    Sell Stock
+                  </motion.button>
                 </div>
               </motion.div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Buy/Sell Modal */}
+      <BuySellModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        action={actionType}
+      />
     </>
   );
 };
