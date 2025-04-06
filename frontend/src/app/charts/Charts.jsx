@@ -5,8 +5,10 @@ import {
 } from 'recharts';
 import dynamic from 'next/dynamic';
 
-// Dynamically import Plotly to avoid SSR issues
-const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
+// Dynamically import Plotly component
+const Plot = dynamic(() => import('react-plotly.js'), { 
+  ssr: false // This prevents server-side rendering
+});
 
 const timeRangeOptions = [
   { value: '1yr', label: '1 Year' },
@@ -280,7 +282,7 @@ const Charts = () => {
             </BarChart>
           </ResponsiveContainer>
           <div className="mt-4 p-4 bg-green-900/20 rounded-lg">
-            <p className="text-black font-medium">
+            <p className="text-green-400 font-medium">
               🏆 Top Performer: {topPerformer.name} ({topPerformer.value.toFixed(2)}%)
             </p>
           </div>
@@ -290,12 +292,14 @@ const Charts = () => {
       <div className="bg-gray-800 rounded-xl p-6">
         <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Stock Performance Comparison</h2>
         <div className="h-[400px] w-full">
-          <Plot
-            data={plotlyData}
-            layout={plotlyLayout}
-            config={plotlyConfig}
-            style={{ width: '100%', height: '100%' }}
-          />
+          {typeof window !== 'undefined' && (
+            <Plot
+              data={plotlyData}
+              layout={plotlyLayout}
+              config={plotlyConfig}
+              style={{ width: '100%', height: '100%' }}
+            />
+          )}
         </div>
       </div>
     </div>

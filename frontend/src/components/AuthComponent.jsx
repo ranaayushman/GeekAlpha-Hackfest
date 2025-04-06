@@ -87,7 +87,7 @@ const AuthForms = () => {
       Cookies.set("authToken", token, { expires: 7 });
       Cookies.set("userId", userId, { expires: 7 }); // Store userId in cookie
 
-      router.push(`/dashboard/${userId}`);
+      router.push(`/${userId}`);
     } catch (err) {
       setLoginError(
         err.response?.data?.message ||
