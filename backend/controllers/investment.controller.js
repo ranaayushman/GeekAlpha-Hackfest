@@ -1,6 +1,7 @@
 const Investment = require("../models/investment.models");
 const yahooFinance = require("yahoo-finance2").default;
 const mongoose = require("mongoose");
+const axios = require("axios");
 
 // Helper function
 const sendResponse = (
@@ -96,7 +97,44 @@ exports.addInvestment = async (req, res) => {
     const { userId } = req.params;
     if (!isValidUserId(res, userId)) return;
 
-    const {
+    const { platform, type, name, quantity = 1, ticker } = req.body;
+
+    if (!platform || !type || !name || !ticker) {
+      return sendResponse(
+        res,
+        400,
+        false,
+        "Missing required fields (platform, type, name, ticker)"
+      );
+    }
+
+    // Fetch price from Twelve Data
+    const response = await axios.get("https://api.twelvedata.com/price", {
+      params: {
+        symbol: ticker,
+        apikey: process.env.TWELVE_DATA_API_KEY,
+      },
+    });
+
+    const priceData = response.data;
+
+    if (priceData.status === "error" || !priceData.price) {
+      return sendResponse(
+        res,
+        400,
+        false,
+        "Failed to fetch price from Twelve Data",
+        null,
+        priceData.message || "Invalid ticker"
+      );
+    }
+
+    const purchasePrice = parseFloat(priceData.price);
+    const amountInvested = purchasePrice * quantity;
+    const currentValue = amountInvested; // initially same
+
+    const newInvestment = new Investment({
+      userId,
       platform,
       type,
       name,
@@ -105,31 +143,11 @@ exports.addInvestment = async (req, res) => {
       quantity,
       ticker,
       purchasePrice,
-    } = req.body;
-
-    if (!platform || !type || !name || amountInvested <= 0) {
-      return sendResponse(
-        res,
-        400,
-        false,
-        "Missing or invalid required fields"
-      );
-    }
-
-    const newInvestment = new Investment({
-      userId,
-      platform,
-      type,
-      name,
-      amountInvested: Number(amountInvested),
-      currentValue: currentValue || amountInvested,
-      quantity: quantity || 1,
-      ticker: ticker || null,
-      purchasePrice: purchasePrice || null,
     });
 
     await newInvestment.save();
-    sendResponse(
+
+    return sendResponse(
       res,
       201,
       true,
@@ -137,7 +155,14 @@ exports.addInvestment = async (req, res) => {
       newInvestment
     );
   } catch (err) {
-    sendResponse(res, 500, false, "Error adding investment", null, err.message);
+    return sendResponse(
+      res,
+      500,
+      false,
+      "Error adding investment",
+      null,
+      err.message
+    );
   }
 };
 
