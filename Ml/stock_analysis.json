@@ -1,0 +1,3512 @@
+{
+    "AAPL": {
+        "basic": {
+            "latest_price": 223.88999938964844,
+            "recent_activity": 35114000.0
+        },
+        "intermediate": {
+            "short_term_trend": 220.70700073242188,
+            "long_term_trend": 230.07278381347658
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "IDXX",
+            "BA",
+            "FDX",
+            "EL",
+            "TT",
+            "PH",
+            "LOW",
+            "NFLX",
+            "SYK",
+            "PLD"
+        ]
+    },
+    "MSFT": {
+        "basic": {
+            "latest_price": 382.1400146484375,
+            "recent_activity": 15968100.0
+        },
+        "intermediate": {
+            "short_term_trend": 386.343000793457,
+            "long_term_trend": 402.6588403320313
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "CAT",
+            "AMD",
+            "PCAR",
+            "KLAC",
+            "FTNT",
+            "RMD",
+            "APD",
+            "AME",
+            "PLD",
+            "NFLX"
+        ]
+    },
+    "GOOGL": {
+        "basic": {
+            "latest_price": 157.0399932861328,
+            "recent_activity": 24774200.0
+        },
+        "intermediate": {
+            "short_term_trend": 163.76708602905273,
+            "long_term_trend": 177.31826171875
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NVDA",
+            "META",
+            "PYPL",
+            "ADBE",
+            "MAR",
+            "CDW",
+            "DIS",
+            "TMO",
+            "AMZN",
+            "MCHP"
+        ]
+    },
+    "AMZN": {
+        "basic": {
+            "latest_price": 196.00999450683594,
+            "recent_activity": 53032100.0
+        },
+        "intermediate": {
+            "short_term_trend": 196.98449935913087,
+            "long_term_trend": 214.72479949951173
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "CDW",
+            "MAR",
+            "ISRG",
+            "PYPL",
+            "DIS",
+            "META",
+            "GS",
+            "DOV",
+            "NVDA",
+            "TFC"
+        ]
+    },
+    "TSLA": {
+        "basic": {
+            "latest_price": 282.760009765625,
+            "recent_activity": 209746300.0
+        },
+        "intermediate": {
+            "short_term_trend": 254.37000122070313,
+            "long_term_trend": 313.39859985351563
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NOW",
+            "ISRG",
+            "TGT",
+            "COF",
+            "AXP",
+            "WST",
+            "GS",
+            "MAR",
+            "WMT",
+            "AMZN"
+        ]
+    },
+    "NVDA": {
+        "basic": {
+            "latest_price": 110.41999816894531,
+            "recent_activity": 217058500.0
+        },
+        "intermediate": {
+            "short_term_trend": 114.3284812927246,
+            "long_term_trend": 123.26086227416992
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "META",
+            "GOOGL",
+            "ADBE",
+            "PYPL",
+            "CDW",
+            "DIS",
+            "MAR",
+            "AMZN",
+            "TMO",
+            "MTD"
+        ]
+    },
+    "META": {
+        "basic": {
+            "latest_price": 583.9299926757812,
+            "recent_activity": 13294000.0
+        },
+        "intermediate": {
+            "short_term_trend": 600.3574951171875,
+            "long_term_trend": 650.3976098632812
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NVDA",
+            "PYPL",
+            "GOOGL",
+            "CDW",
+            "MAR",
+            "ADBE",
+            "DIS",
+            "AMZN",
+            "MTD",
+            "TMO"
+        ]
+    },
+    "BRK-B": {
+        "basic": {
+            "latest_price": 537.719970703125,
+            "recent_activity": 4052900.0
+        },
+        "intermediate": {
+            "short_term_trend": 518.785498046875,
+            "long_term_trend": 495.6943994140625
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CI",
+            "T",
+            "BRO",
+            "CB",
+            "XOM",
+            "AIG",
+            "CVX",
+            "ORLY",
+            "HCA",
+            "F"
+        ]
+    },
+    "JPM": {
+        "basic": {
+            "latest_price": 245.82000732421875,
+            "recent_activity": 7738600.0
+        },
+        "intermediate": {
+            "short_term_trend": 240.01650009155273,
+            "long_term_trend": 256.30399932861326
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "HD",
+            "USB",
+            "LOW",
+            "WMT",
+            "PNC",
+            "PH",
+            "BAC",
+            "EL",
+            "AMP",
+            "C"
+        ]
+    },
+    "JNJ": {
+        "basic": {
+            "latest_price": 155.36000061035156,
+            "recent_activity": 10351800.0
+        },
+        "intermediate": {
+            "short_term_trend": 162.93900146484376,
+            "long_term_trend": 158.7042138671875
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "INTC",
+            "MRK",
+            "VRTX",
+            "MDT",
+            "NEE",
+            "GM",
+            "DE",
+            "PFE",
+            "MMM",
+            "LMT"
+        ]
+    },
+    "V": {
+        "basic": {
+            "latest_price": 346.3299865722656,
+            "recent_activity": 5669800.0
+        },
+        "intermediate": {
+            "short_term_trend": 340.45799713134767,
+            "long_term_trend": 344.4083172607422
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "EW",
+            "CSCO",
+            "HON",
+            "MA",
+            "MSCI",
+            "IBM",
+            "EOG",
+            "PG",
+            "HUM",
+            "SCHW"
+        ]
+    },
+    "PG": {
+        "basic": {
+            "latest_price": 169.5,
+            "recent_activity": 6271300.0
+        },
+        "intermediate": {
+            "short_term_trend": 169.375,
+            "long_term_trend": 169.04449035644532
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "IBM",
+            "PEP",
+            "PSA",
+            "CHD",
+            "LMT",
+            "ECL",
+            "GE",
+            "AON",
+            "DE",
+            "MMM"
+        ]
+    },
+    "UNH": {
+        "basic": {
+            "latest_price": 523.2000122070312,
+            "recent_activity": 2371900.0
+        },
+        "intermediate": {
+            "short_term_trend": 503.9347213745117,
+            "long_term_trend": 507.6918475341797
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "FIS",
+            "D",
+            "CTAS",
+            "PAYX",
+            "EOG",
+            "HON",
+            "SYY",
+            "ROP",
+            "EW",
+            "CMCSA"
+        ]
+    },
+    "XOM": {
+        "basic": {
+            "latest_price": 118.66999816894531,
+            "recent_activity": 12587400.0
+        },
+        "intermediate": {
+            "short_term_trend": 114.22150039672852,
+            "long_term_trend": 110.95887908935546
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "ORLY",
+            "HCA",
+            "CVX",
+            "T",
+            "CB",
+            "CI",
+            "BRK-B",
+            "F",
+            "TRV",
+            "KO"
+        ]
+    },
+    "HD": {
+        "basic": {
+            "latest_price": 370.8900146484375,
+            "recent_activity": 3183000.0
+        },
+        "intermediate": {
+            "short_term_trend": 361.36612396240236,
+            "long_term_trend": 385.55837097167966
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "JPM",
+            "USB",
+            "LOW",
+            "WMT",
+            "PH",
+            "PNC",
+            "EL",
+            "COST",
+            "BAC",
+            "AMP"
+        ]
+    },
+    "MA": {
+        "basic": {
+            "latest_price": 547.3800048828125,
+            "recent_activity": 2993600.0
+        },
+        "intermediate": {
+            "short_term_trend": 539.1025024414063,
+            "long_term_trend": 551.1783996582031
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "HUM",
+            "BLK",
+            "SCHW",
+            "SYK",
+            "CSCO",
+            "MSCI",
+            "V",
+            "TT",
+            "EW",
+            "SPGI"
+        ]
+    },
+    "ABBV": {
+        "basic": {
+            "latest_price": 205.19000244140625,
+            "recent_activity": 9259800.0
+        },
+        "intermediate": {
+            "short_term_trend": 209.70050048828125,
+            "long_term_trend": 199.2043994140625
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "MO",
+            "VRTX",
+            "ICE",
+            "CME",
+            "STZ",
+            "GILD",
+            "SO",
+            "RTX",
+            "KMB",
+            "AON"
+        ]
+    },
+    "PFE": {
+        "basic": {
+            "latest_price": 24.700000762939453,
+            "recent_activity": 41845000.0
+        },
+        "intermediate": {
+            "short_term_trend": 25.768499755859374,
+            "long_term_trend": 25.975339813232424
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "XYL",
+            "MRK",
+            "LLY",
+            "AME",
+            "ADI",
+            "TXN",
+            "KLAC",
+            "PCAR",
+            "MDT",
+            "CAT"
+        ]
+    },
+    "KO": {
+        "basic": {
+            "latest_price": 71.33000183105469,
+            "recent_activity": 14595400.0
+        },
+        "intermediate": {
+            "short_term_trend": 70.04322166442871,
+            "long_term_trend": 67.83247131347656
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "TRV",
+            "OTIS",
+            "F",
+            "KMB",
+            "SO",
+            "DUK",
+            "WELL",
+            "CVX",
+            "CL",
+            "CME"
+        ]
+    },
+    "PEP": {
+        "basic": {
+            "latest_price": 149.1199951171875,
+            "recent_activity": 5857900.0
+        },
+        "intermediate": {
+            "short_term_trend": 149.53574905395507,
+            "long_term_trend": 148.60506011962892
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "PG",
+            "CHD",
+            "LMT",
+            "PSA",
+            "IBM",
+            "NEE",
+            "AON",
+            "ECL",
+            "DE",
+            "GE"
+        ]
+    },
+    "COST": {
+        "basic": {
+            "latest_price": 965.0800170898438,
+            "recent_activity": 1708800.0
+        },
+        "intermediate": {
+            "short_term_trend": 931.0269989013672,
+            "long_term_trend": 985.8760400390624
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "HD",
+            "LOW",
+            "JPM",
+            "AAPL",
+            "USB",
+            "EL",
+            "PH",
+            "IDXX",
+            "WMT",
+            "SPGI"
+        ]
+    },
+    "MRK": {
+        "basic": {
+            "latest_price": 86.5999984741211,
+            "recent_activity": 10583000.0
+        },
+        "intermediate": {
+            "short_term_trend": 91.7773223876953,
+            "long_term_trend": 91.05643493652343
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "PFE",
+            "JNJ",
+            "INTC",
+            "XYL",
+            "ADI",
+            "LLY",
+            "AME",
+            "MDT",
+            "TXN",
+            "KLAC"
+        ]
+    },
+    "DIS": {
+        "basic": {
+            "latest_price": 97.87999725341797,
+            "recent_activity": 7929800.0
+        },
+        "intermediate": {
+            "short_term_trend": 99.94300003051758,
+            "long_term_trend": 106.68439987182617
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "CDW",
+            "DOV",
+            "MTD",
+            "AMZN",
+            "META",
+            "ADBE",
+            "NVDA",
+            "TMO",
+            "PYPL",
+            "MAR"
+        ]
+    },
+    "WMT": {
+        "basic": {
+            "latest_price": 89.76000213623047,
+            "recent_activity": 19145300.0
+        },
+        "intermediate": {
+            "short_term_trend": 86.99129257202148,
+            "long_term_trend": 93.97261322021484
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "JPM",
+            "HD",
+            "COF",
+            "AXP",
+            "PNC",
+            "C",
+            "USB",
+            "GS",
+            "TFC",
+            "LOW"
+        ]
+    },
+    "CVX": {
+        "basic": {
+            "latest_price": 166.47000122070312,
+            "recent_activity": 7034000.0
+        },
+        "intermediate": {
+            "short_term_trend": 161.56399993896486,
+            "long_term_trend": 157.08628692626954
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "F",
+            "XOM",
+            "TRV",
+            "ORLY",
+            "KO",
+            "OTIS",
+            "WELL",
+            "HCA",
+            "KMB",
+            "CB"
+        ]
+    },
+    "BAC": {
+        "basic": {
+            "latest_price": 41.849998474121094,
+            "recent_activity": 28163300.0
+        },
+        "intermediate": {
+            "short_term_trend": 41.54049987792969,
+            "long_term_trend": 43.968785781860355
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "AMP",
+            "DLR",
+            "SBUX",
+            "USB",
+            "PH",
+            "PNC",
+            "APD",
+            "FTNT",
+            "EL",
+            "LOW"
+        ]
+    },
+    "TMO": {
+        "basic": {
+            "latest_price": 489.05999755859375,
+            "recent_activity": 2068100.0
+        },
+        "intermediate": {
+            "short_term_trend": 513.3266082763672,
+            "long_term_trend": 537.3634521484375
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MTD",
+            "ADBE",
+            "ADI",
+            "MCHP",
+            "DIS",
+            "NVDA",
+            "NKE",
+            "META",
+            "GOOGL",
+            "DOV"
+        ]
+    },
+    "LLY": {
+        "basic": {
+            "latest_price": 818.219970703125,
+            "recent_activity": 2679700.0
+        },
+        "intermediate": {
+            "short_term_trend": 833.7559997558594,
+            "long_term_trend": 846.4870703125
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "TXN",
+            "BDX",
+            "XYL",
+            "AME",
+            "ZTS",
+            "ITW",
+            "MDT",
+            "KLAC",
+            "PLD",
+            "GM"
+        ]
+    },
+    "AVGO": {
+        "basic": {
+            "latest_price": 172.08999633789062,
+            "recent_activity": 19335300.0
+        },
+        "intermediate": {
+            "short_term_trend": 184.6595703125,
+            "long_term_trend": 204.90829315185547
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "WST",
+            "GOOGL",
+            "TGT",
+            "NOW",
+            "NVDA",
+            "PYPL",
+            "META",
+            "NKE",
+            "MCHP",
+            "ADBE"
+        ]
+    },
+    "MCD": {
+        "basic": {
+            "latest_price": 311.5799865722656,
+            "recent_activity": 2766000.0
+        },
+        "intermediate": {
+            "short_term_trend": 308.143000793457,
+            "long_term_trend": 301.9255651855469
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "RTX",
+            "CL",
+            "CMCSA",
+            "STZ",
+            "DUK",
+            "ROP",
+            "SO",
+            "SYY",
+            "WELL",
+            "OTIS"
+        ]
+    },
+    "NFLX": {
+        "basic": {
+            "latest_price": 935.52001953125,
+            "recent_activity": 3233800.0
+        },
+        "intermediate": {
+            "short_term_trend": 934.2319976806641,
+            "long_term_trend": 971.9245983886718
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "RMD",
+            "FDX",
+            "PLD",
+            "APD",
+            "FTNT",
+            "BA",
+            "EL",
+            "PH",
+            "AAPL",
+            "AMD"
+        ]
+    },
+    "AMD": {
+        "basic": {
+            "latest_price": 102.95999908447266,
+            "recent_activity": 20428000.0
+        },
+        "intermediate": {
+            "short_term_trend": 103.87649993896484,
+            "long_term_trend": 108.42039978027344
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MSFT",
+            "CAT",
+            "FTNT",
+            "PCAR",
+            "APD",
+            "RMD",
+            "KLAC",
+            "PLD",
+            "NFLX",
+            "AME"
+        ]
+    },
+    "INTC": {
+        "basic": {
+            "latest_price": 21.979999542236328,
+            "recent_activity": 58179300.0
+        },
+        "intermediate": {
+            "short_term_trend": 22.919499969482423,
+            "long_term_trend": 22.324599952697753
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "JNJ",
+            "VRTX",
+            "MDT",
+            "NEE",
+            "GM",
+            "DE",
+            "LMT",
+            "MMM",
+            "MRK",
+            "CHD"
+        ]
+    },
+    "CMCSA": {
+        "basic": {
+            "latest_price": 36.61000061035156,
+            "recent_activity": 18813100.0
+        },
+        "intermediate": {
+            "short_term_trend": 36.06306343078613,
+            "long_term_trend": 35.5968318939209
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "ROP",
+            "SYY",
+            "MCD",
+            "RTX",
+            "CL",
+            "D",
+            "STZ",
+            "WELL",
+            "DUK",
+            "AON"
+        ]
+    },
+    "ADBE": {
+        "basic": {
+            "latest_price": 385.7799987792969,
+            "recent_activity": 2840300.0
+        },
+        "intermediate": {
+            "short_term_trend": 402.9929992675781,
+            "long_term_trend": 428.33160095214845
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NVDA",
+            "TMO",
+            "META",
+            "MTD",
+            "GOOGL",
+            "DIS",
+            "MCHP",
+            "CDW",
+            "PYPL",
+            "NKE"
+        ]
+    },
+    "CSCO": {
+        "basic": {
+            "latest_price": 61.81999969482422,
+            "recent_activity": 18558400.0
+        },
+        "intermediate": {
+            "short_term_trend": 61.26449966430664,
+            "long_term_trend": 62.09539978027344
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MA",
+            "V",
+            "HUM",
+            "IBM",
+            "ECL",
+            "GE",
+            "EW",
+            "BLK",
+            "ZTS",
+            "SCHW"
+        ]
+    },
+    "HON": {
+        "basic": {
+            "latest_price": 215.99000549316406,
+            "recent_activity": 3421500.0
+        },
+        "intermediate": {
+            "short_term_trend": 211.16549987792968,
+            "long_term_trend": 212.42794464111327
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "D",
+            "EW",
+            "V",
+            "EOG",
+            "SYY",
+            "ROP",
+            "UNH",
+            "CMCSA",
+            "FIS",
+            "CSCO"
+        ]
+    },
+    "TXN": {
+        "basic": {
+            "latest_price": 178.19000244140625,
+            "recent_activity": 4328800.0
+        },
+        "intermediate": {
+            "short_term_trend": 180.86050033569336,
+            "long_term_trend": 185.56034942626954
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "AME",
+            "LLY",
+            "KLAC",
+            "PLD",
+            "PCAR",
+            "XYL",
+            "CAT",
+            "RMD",
+            "MSFT",
+            "NFLX"
+        ]
+    },
+    "IBM": {
+        "basic": {
+            "latest_price": 249.97999572753906,
+            "recent_activity": 4051300.0
+        },
+        "intermediate": {
+            "short_term_trend": 249.35699996948242,
+            "long_term_trend": 249.93443603515624
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "PG",
+            "PSA",
+            "PEP",
+            "ECL",
+            "GE",
+            "CSCO",
+            "LMT",
+            "CHD",
+            "V",
+            "MMM"
+        ]
+    },
+    "GS": {
+        "basic": {
+            "latest_price": 563.0999755859375,
+            "recent_activity": 2548600.0
+        },
+        "intermediate": {
+            "short_term_trend": 554.0239959716797,
+            "long_term_trend": 601.2226220703125
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "C",
+            "AXP",
+            "TFC",
+            "PNC",
+            "ISRG",
+            "SBUX",
+            "WMT",
+            "DLR",
+            "JPM",
+            "BAC"
+        ]
+    },
+    "PYPL": {
+        "basic": {
+            "latest_price": 67.1500015258789,
+            "recent_activity": 8066200.0
+        },
+        "intermediate": {
+            "short_term_trend": 68.59400100708008,
+            "long_term_trend": 75.05890045166015
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MAR",
+            "META",
+            "NVDA",
+            "CDW",
+            "GOOGL",
+            "AMZN",
+            "DIS",
+            "ADBE",
+            "NOW",
+            "TGT"
+        ]
+    },
+    "SBUX": {
+        "basic": {
+            "latest_price": 99.41000366210938,
+            "recent_activity": 6036400.0
+        },
+        "intermediate": {
+            "short_term_trend": 99.0140007019043,
+            "long_term_trend": 105.34971099853516
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "DLR",
+            "AMP",
+            "BAC",
+            "PNC",
+            "TFC",
+            "DOV",
+            "C",
+            "USB",
+            "FTNT",
+            "APD"
+        ]
+    },
+    "ISRG": {
+        "basic": {
+            "latest_price": 507.04998779296875,
+            "recent_activity": 1425900.0
+        },
+        "intermediate": {
+            "short_term_trend": 498.8314956665039,
+            "long_term_trend": 550.3989996337891
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "GS",
+            "AMZN",
+            "AXP",
+            "C",
+            "TFC",
+            "MAR",
+            "CDW",
+            "PNC",
+            "WMT",
+            "SBUX"
+        ]
+    },
+    "C": {
+        "basic": {
+            "latest_price": 71.76000213623047,
+            "recent_activity": 9683800.0
+        },
+        "intermediate": {
+            "short_term_trend": 70.62650070190429,
+            "long_term_trend": 76.32338760375977
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "GS",
+            "TFC",
+            "AXP",
+            "PNC",
+            "SBUX",
+            "DLR",
+            "WMT",
+            "JPM",
+            "BAC",
+            "AMP"
+        ]
+    },
+    "GE": {
+        "basic": {
+            "latest_price": 199.77000427246094,
+            "recent_activity": 6017900.0
+        },
+        "intermediate": {
+            "short_term_trend": 200.65979537963867,
+            "long_term_trend": 201.75667449951172
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "ECL",
+            "ITW",
+            "PSA",
+            "MMM",
+            "DE",
+            "GM",
+            "ZTS",
+            "BDX",
+            "IBM",
+            "PG"
+        ]
+    },
+    "BLK": {
+        "basic": {
+            "latest_price": 961.8400268554688,
+            "recent_activity": 488400.0
+        },
+        "intermediate": {
+            "short_term_trend": 945.910498046875,
+            "long_term_trend": 972.540517578125
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "SCHW",
+            "SYK",
+            "HUM",
+            "MA",
+            "TT",
+            "MSCI",
+            "IDXX",
+            "CSCO",
+            "SPGI",
+            "AAPL"
+        ]
+    },
+    "AXP": {
+        "basic": {
+            "latest_price": 275.25,
+            "recent_activity": 2469900.0
+        },
+        "intermediate": {
+            "short_term_trend": 268.64399948120115,
+            "long_term_trend": 292.5466000366211
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "GS",
+            "C",
+            "TFC",
+            "WMT",
+            "PNC",
+            "ISRG",
+            "JPM",
+            "SBUX",
+            "HD",
+            "COF"
+        ]
+    },
+    "CAT": {
+        "basic": {
+            "latest_price": 334.6600036621094,
+            "recent_activity": 1743700.0
+        },
+        "intermediate": {
+            "short_term_trend": 338.33949890136716,
+            "long_term_trend": 352.0164013671875
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MSFT",
+            "AMD",
+            "PCAR",
+            "KLAC",
+            "FTNT",
+            "RMD",
+            "APD",
+            "AME",
+            "PLD",
+            "NFLX"
+        ]
+    },
+    "BA": {
+        "basic": {
+            "latest_price": 168.55999755859375,
+            "recent_activity": 5771900.0
+        },
+        "intermediate": {
+            "short_term_trend": 167.1734992980957,
+            "long_term_trend": 173.4751998901367
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "IDXX",
+            "AAPL",
+            "FDX",
+            "TT",
+            "NFLX",
+            "PLD",
+            "EL",
+            "RMD",
+            "PH",
+            "SYK"
+        ]
+    },
+    "MDT": {
+        "basic": {
+            "latest_price": 88.86000061035156,
+            "recent_activity": 5551300.0
+        },
+        "intermediate": {
+            "short_term_trend": 90.49164695739746,
+            "long_term_trend": 90.26176040649415
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "GM",
+            "DE",
+            "MMM",
+            "GE",
+            "ECL",
+            "ITW",
+            "LMT",
+            "PSA",
+            "BDX",
+            "NEE"
+        ]
+    },
+    "DE": {
+        "basic": {
+            "latest_price": 470.8999938964844,
+            "recent_activity": 1393700.0
+        },
+        "intermediate": {
+            "short_term_trend": 476.64854736328124,
+            "long_term_trend": 476.00768798828125
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "MMM",
+            "GM",
+            "MDT",
+            "ECL",
+            "GE",
+            "PSA",
+            "LMT",
+            "ITW",
+            "NEE",
+            "BDX"
+        ]
+    },
+    "LMT": {
+        "basic": {
+            "latest_price": 452.8699951171875,
+            "recent_activity": 1269400.0
+        },
+        "intermediate": {
+            "short_term_trend": 457.34450073242186,
+            "long_term_trend": 453.2983074951172
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "NEE",
+            "CHD",
+            "PEP",
+            "PSA",
+            "DE",
+            "PG",
+            "MMM",
+            "GM",
+            "ECL",
+            "IBM"
+        ]
+    },
+    "MMM": {
+        "basic": {
+            "latest_price": 147.75999450683594,
+            "recent_activity": 4408400.0
+        },
+        "intermediate": {
+            "short_term_trend": 149.45100021362305,
+            "long_term_trend": 149.46479095458983
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "DE",
+            "GM",
+            "MDT",
+            "ECL",
+            "GE",
+            "PSA",
+            "ITW",
+            "LMT",
+            "BDX",
+            "ZTS"
+        ]
+    },
+    "GILD": {
+        "basic": {
+            "latest_price": 111.88999938964844,
+            "recent_activity": 7441400.0
+        },
+        "intermediate": {
+            "short_term_trend": 111.20320358276368,
+            "long_term_trend": 105.87856491088867
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CME",
+            "MO",
+            "KMB",
+            "TRV",
+            "KO",
+            "OTIS",
+            "SO",
+            "F",
+            "DUK",
+            "CB"
+        ]
+    },
+    "LOW": {
+        "basic": {
+            "latest_price": 235.27999877929688,
+            "recent_activity": 2532900.0
+        },
+        "intermediate": {
+            "short_term_trend": 231.15100021362304,
+            "long_term_trend": 244.10080200195313
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "PH",
+            "EL",
+            "USB",
+            "HD",
+            "JPM",
+            "BAC",
+            "AAPL",
+            "FDX",
+            "AMP",
+            "APD"
+        ]
+    },
+    "T": {
+        "basic": {
+            "latest_price": 28.139999389648438,
+            "recent_activity": 41513900.0
+        },
+        "intermediate": {
+            "short_term_trend": 27.141000080108643,
+            "long_term_trend": 25.984199981689454
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "BRK-B",
+            "CI",
+            "BRO",
+            "CB",
+            "XOM",
+            "CVX",
+            "ORLY",
+            "HCA",
+            "AIG",
+            "F"
+        ]
+    },
+    "F": {
+        "basic": {
+            "latest_price": 10.149999618530273,
+            "recent_activity": 136316000.0
+        },
+        "intermediate": {
+            "short_term_trend": 9.93199987411499,
+            "long_term_trend": 9.637823905944824
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "TRV",
+            "KO",
+            "OTIS",
+            "KMB",
+            "CVX",
+            "WELL",
+            "DUK",
+            "SO",
+            "CL",
+            "XOM"
+        ]
+    },
+    "GM": {
+        "basic": {
+            "latest_price": 47.97999954223633,
+            "recent_activity": 12256100.0
+        },
+        "intermediate": {
+            "short_term_trend": 48.60399990081787,
+            "long_term_trend": 48.58930671691895
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "MMM",
+            "DE",
+            "MDT",
+            "GE",
+            "ECL",
+            "PSA",
+            "ITW",
+            "LMT",
+            "BDX",
+            "ZTS"
+        ]
+    },
+    "NKE": {
+        "basic": {
+            "latest_price": 64.95999908447266,
+            "recent_activity": 10913900.0
+        },
+        "intermediate": {
+            "short_term_trend": 70.32549991607667,
+            "long_term_trend": 73.46498435974121
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MCHP",
+            "TMO",
+            "ADBE",
+            "GOOGL",
+            "NVDA",
+            "MTD",
+            "ADI",
+            "META",
+            "DIS",
+            "PYPL"
+        ]
+    },
+    "VRTX": {
+        "basic": {
+            "latest_price": 483.489990234375,
+            "recent_activity": 987900.0
+        },
+        "intermediate": {
+            "short_term_trend": 499.3355010986328,
+            "long_term_trend": 479.3352001953125
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "ABBV",
+            "ICE",
+            "INTC",
+            "NEE",
+            "JNJ",
+            "CHD",
+            "LMT",
+            "AON",
+            "STZ",
+            "MO"
+        ]
+    },
+    "SO": {
+        "basic": {
+            "latest_price": 91.30000305175781,
+            "recent_activity": 4703400.0
+        },
+        "intermediate": {
+            "short_term_trend": 90.17349967956542,
+            "long_term_trend": 87.49554656982421
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "DUK",
+            "KMB",
+            "OTIS",
+            "CL",
+            "KO",
+            "TRV",
+            "RTX",
+            "F",
+            "MCD",
+            "WELL"
+        ]
+    },
+    "D": {
+        "basic": {
+            "latest_price": 56.22999954223633,
+            "recent_activity": 3263300.0
+        },
+        "intermediate": {
+            "short_term_trend": 54.80300006866455,
+            "long_term_trend": 54.87273414611816
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "HON",
+            "SYY",
+            "ROP",
+            "UNH",
+            "CMCSA",
+            "EOG",
+            "EW",
+            "V",
+            "FIS",
+            "PAYX"
+        ]
+    },
+    "DUK": {
+        "basic": {
+            "latest_price": 120.38999938964844,
+            "recent_activity": 2541200.0
+        },
+        "intermediate": {
+            "short_term_trend": 118.73600006103516,
+            "long_term_trend": 115.43513275146485
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "SO",
+            "CL",
+            "OTIS",
+            "KMB",
+            "KO",
+            "TRV",
+            "RTX",
+            "F",
+            "MCD",
+            "WELL"
+        ]
+    },
+    "SPGI": {
+        "basic": {
+            "latest_price": 513.97998046875,
+            "recent_activity": 863400.0
+        },
+        "intermediate": {
+            "short_term_trend": 498.4035018920898,
+            "long_term_trend": 514.4024200439453
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MSCI",
+            "SCHW",
+            "BLK",
+            "SYK",
+            "MA",
+            "EW",
+            "EOG",
+            "HUM",
+            "V",
+            "CSCO"
+        ]
+    },
+    "NEE": {
+        "basic": {
+            "latest_price": 70.4800033569336,
+            "recent_activity": 8476500.0
+        },
+        "intermediate": {
+            "short_term_trend": 71.43650016784667,
+            "long_term_trend": 70.42045806884765
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "LMT",
+            "CHD",
+            "PEP",
+            "PSA",
+            "DE",
+            "PG",
+            "MMM",
+            "AON",
+            "GM",
+            "ICE"
+        ]
+    },
+    "SCHW": {
+        "basic": {
+            "latest_price": 78.58999633789062,
+            "recent_activity": 8869800.0
+        },
+        "intermediate": {
+            "short_term_trend": 77.12799911499023,
+            "long_term_trend": 79.36801315307618
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BLK",
+            "SYK",
+            "HUM",
+            "MA",
+            "MSCI",
+            "SPGI",
+            "TT",
+            "IDXX",
+            "CSCO",
+            "AAPL"
+        ]
+    },
+    "USB": {
+        "basic": {
+            "latest_price": 43.0099983215332,
+            "recent_activity": 10424600.0
+        },
+        "intermediate": {
+            "short_term_trend": 42.26794776916504,
+            "long_term_trend": 44.871951751708984
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "LOW",
+            "JPM",
+            "PH",
+            "HD",
+            "BAC",
+            "EL",
+            "PNC",
+            "AMP",
+            "DLR",
+            "SBUX"
+        ]
+    },
+    "PLD": {
+        "basic": {
+            "latest_price": 112.33999633789062,
+            "recent_activity": 3229900.0
+        },
+        "intermediate": {
+            "short_term_trend": 112.63663330078126,
+            "long_term_trend": 116.6783024597168
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "RMD",
+            "NFLX",
+            "FDX",
+            "APD",
+            "FTNT",
+            "BA",
+            "TXN",
+            "CAT",
+            "AMD",
+            "MSFT"
+        ]
+    },
+    "RTX": {
+        "basic": {
+            "latest_price": 133.14999389648438,
+            "recent_activity": 3350000.0
+        },
+        "intermediate": {
+            "short_term_trend": 131.7825008392334,
+            "long_term_trend": 128.89157592773438
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "MCD",
+            "CL",
+            "STZ",
+            "CMCSA",
+            "DUK",
+            "SO",
+            "ROP",
+            "SYY",
+            "WELL",
+            "OTIS"
+        ]
+    },
+    "CI": {
+        "basic": {
+            "latest_price": 331.9200134277344,
+            "recent_activity": 1108200.0
+        },
+        "intermediate": {
+            "short_term_trend": 320.77049713134767,
+            "long_term_trend": 306.3533111572266
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "BRK-B",
+            "T",
+            "BRO",
+            "CB",
+            "XOM",
+            "CVX",
+            "AIG",
+            "ORLY",
+            "HCA",
+            "F"
+        ]
+    },
+    "MO": {
+        "basic": {
+            "latest_price": 57.119998931884766,
+            "recent_activity": 20145400.0
+        },
+        "intermediate": {
+            "short_term_trend": 57.460435676574704,
+            "long_term_trend": 54.61249557495117
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CME",
+            "GILD",
+            "ABBV",
+            "KMB",
+            "SO",
+            "STZ",
+            "DUK",
+            "TRV",
+            "KO",
+            "OTIS"
+        ]
+    },
+    "CB": {
+        "basic": {
+            "latest_price": 301.5400085449219,
+            "recent_activity": 1535300.0
+        },
+        "intermediate": {
+            "short_term_trend": 293.51635284423827,
+            "long_term_trend": 280.6301580810547
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CI",
+            "T",
+            "BRK-B",
+            "BRO",
+            "XOM",
+            "CVX",
+            "F",
+            "TRV",
+            "KO",
+            "GILD"
+        ]
+    },
+    "ADI": {
+        "basic": {
+            "latest_price": 199.58999633789062,
+            "recent_activity": 2428600.0
+        },
+        "intermediate": {
+            "short_term_trend": 209.0819984436035,
+            "long_term_trend": 214.8843930053711
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "MTD",
+            "TMO",
+            "XYL",
+            "PFE",
+            "AME",
+            "KLAC",
+            "PCAR",
+            "MSFT",
+            "CAT",
+            "MRK"
+        ]
+    },
+    "TGT": {
+        "basic": {
+            "latest_price": 105.7699966430664,
+            "recent_activity": 5583700.0
+        },
+        "intermediate": {
+            "short_term_trend": 107.01199951171876,
+            "long_term_trend": 120.92370330810547
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NOW",
+            "WST",
+            "MAR",
+            "PYPL",
+            "META",
+            "GOOGL",
+            "AMZN",
+            "NVDA",
+            "CDW",
+            "ISRG"
+        ]
+    },
+    "BDX": {
+        "basic": {
+            "latest_price": 226.4199981689453,
+            "recent_activity": 1634000.0
+        },
+        "intermediate": {
+            "short_term_trend": 227.72995071411134,
+            "long_term_trend": 230.69698028564454
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "ZTS",
+            "ITW",
+            "GE",
+            "ECL",
+            "MMM",
+            "GM",
+            "DE",
+            "LLY",
+            "MDT",
+            "PSA"
+        ]
+    },
+    "ZTS": {
+        "basic": {
+            "latest_price": 163.5,
+            "recent_activity": 2026600.0
+        },
+        "intermediate": {
+            "short_term_trend": 164.09149932861328,
+            "long_term_trend": 166.37439971923828
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BDX",
+            "ITW",
+            "GE",
+            "ECL",
+            "MMM",
+            "GM",
+            "CSCO",
+            "DE",
+            "TT",
+            "PSA"
+        ]
+    },
+    "SYK": {
+        "basic": {
+            "latest_price": 377.4599914550781,
+            "recent_activity": 1801700.0
+        },
+        "intermediate": {
+            "short_term_trend": 371.1119750976562,
+            "long_term_trend": 382.4512634277344
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BLK",
+            "SCHW",
+            "HUM",
+            "MA",
+            "TT",
+            "IDXX",
+            "MSCI",
+            "AAPL",
+            "SPGI",
+            "BA"
+        ]
+    },
+    "EOG": {
+        "basic": {
+            "latest_price": 129.97000122070312,
+            "recent_activity": 1826900.0
+        },
+        "intermediate": {
+            "short_term_trend": 125.66650009155273,
+            "long_term_trend": 127.95280014038086
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "FIS",
+            "EW",
+            "HON",
+            "UNH",
+            "MSCI",
+            "D",
+            "V",
+            "SPGI",
+            "CTAS",
+            "MA"
+        ]
+    },
+    "NOW": {
+        "basic": {
+            "latest_price": 824.030029296875,
+            "recent_activity": 1620400.0
+        },
+        "intermediate": {
+            "short_term_trend": 829.2425048828125,
+            "long_term_trend": 935.9962023925781
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "TGT",
+            "MAR",
+            "WST",
+            "PYPL",
+            "META",
+            "AMZN",
+            "GOOGL",
+            "ISRG",
+            "CDW",
+            "NVDA"
+        ]
+    },
+    "CME": {
+        "basic": {
+            "latest_price": 262.5400085449219,
+            "recent_activity": 2063800.0
+        },
+        "intermediate": {
+            "short_term_trend": 261.6299995422363,
+            "long_term_trend": 250.4976202392578
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "GILD",
+            "MO",
+            "KMB",
+            "SO",
+            "DUK",
+            "TRV",
+            "KO",
+            "OTIS",
+            "STZ",
+            "F"
+        ]
+    },
+    "PNC": {
+        "basic": {
+            "latest_price": 177.00999450683594,
+            "recent_activity": 2116600.0
+        },
+        "intermediate": {
+            "short_term_trend": 174.45350036621093,
+            "long_term_trend": 186.68920013427734
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "TFC",
+            "SBUX",
+            "C",
+            "BAC",
+            "DLR",
+            "USB",
+            "JPM",
+            "AMP",
+            "HD",
+            "GS"
+        ]
+    },
+    "EL": {
+        "basic": {
+            "latest_price": 68.76000213623047,
+            "recent_activity": 3892500.0
+        },
+        "intermediate": {
+            "short_term_trend": 67.91149940490723,
+            "long_term_trend": 71.36356925964355
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "PH",
+            "LOW",
+            "FDX",
+            "USB",
+            "AAPL",
+            "APD",
+            "NFLX",
+            "BAC",
+            "BA",
+            "FTNT"
+        ]
+    },
+    "ICE": {
+        "basic": {
+            "latest_price": 170.44000244140625,
+            "recent_activity": 6613000.0
+        },
+        "intermediate": {
+            "short_term_trend": 172.2380172729492,
+            "long_term_trend": 167.69619079589845
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "AON",
+            "STZ",
+            "CHD",
+            "NEE",
+            "LMT",
+            "PEP",
+            "RTX",
+            "VRTX",
+            "MCD",
+            "ABBV"
+        ]
+    },
+    "TFC": {
+        "basic": {
+            "latest_price": 41.560001373291016,
+            "recent_activity": 8444500.0
+        },
+        "intermediate": {
+            "short_term_trend": 41.111000061035156,
+            "long_term_trend": 44.23006362915039
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "C",
+            "GS",
+            "PNC",
+            "SBUX",
+            "DLR",
+            "AXP",
+            "AMP",
+            "BAC",
+            "DOV",
+            "USB"
+        ]
+    },
+    "AON": {
+        "basic": {
+            "latest_price": 396.0299987792969,
+            "recent_activity": 1013700.0
+        },
+        "intermediate": {
+            "short_term_trend": 396.1835021972656,
+            "long_term_trend": 390.2268017578125
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CHD",
+            "PEP",
+            "ICE",
+            "PG",
+            "NEE",
+            "LMT",
+            "STZ",
+            "CMCSA",
+            "MCD",
+            "RTX"
+        ]
+    },
+    "FDX": {
+        "basic": {
+            "latest_price": 245.1699981689453,
+            "recent_activity": 988100.0
+        },
+        "intermediate": {
+            "short_term_trend": 243.7756217956543,
+            "long_term_trend": 253.91855346679688
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NFLX",
+            "BA",
+            "PLD",
+            "RMD",
+            "EL",
+            "AAPL",
+            "APD",
+            "IDXX",
+            "PH",
+            "FTNT"
+        ]
+    },
+    "EW": {
+        "basic": {
+            "latest_price": 72.05000305175781,
+            "recent_activity": 2865300.0
+        },
+        "intermediate": {
+            "short_term_trend": 70.51300010681152,
+            "long_term_trend": 71.50219970703125
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Medium",
+        "recommendations": [
+            "V",
+            "HON",
+            "MSCI",
+            "EOG",
+            "CSCO",
+            "MA",
+            "D",
+            "SPGI",
+            "SCHW",
+            "HUM"
+        ]
+    },
+    "APD": {
+        "basic": {
+            "latest_price": 294.9599914550781,
+            "recent_activity": 751400.0
+        },
+        "intermediate": {
+            "short_term_trend": 294.73883666992185,
+            "long_term_trend": 308.40479370117185
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "FTNT",
+            "RMD",
+            "NFLX",
+            "FDX",
+            "AMD",
+            "PLD",
+            "AMP",
+            "CAT",
+            "BAC",
+            "EL"
+        ]
+    },
+    "PSA": {
+        "basic": {
+            "latest_price": 296.92999267578125,
+            "recent_activity": 596800.0
+        },
+        "intermediate": {
+            "short_term_trend": 298.12646636962893,
+            "long_term_trend": 297.96135192871094
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "ECL",
+            "PG",
+            "IBM",
+            "GE",
+            "PEP",
+            "LMT",
+            "MMM",
+            "DE",
+            "GM",
+            "CHD"
+        ]
+    },
+    "CL": {
+        "basic": {
+            "latest_price": 93.55000305175781,
+            "recent_activity": 4848600.0
+        },
+        "intermediate": {
+            "short_term_trend": 92.18449974060059,
+            "long_term_trend": 90.0481999206543
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "DUK",
+            "RTX",
+            "MCD",
+            "SO",
+            "WELL",
+            "OTIS",
+            "KMB",
+            "CMCSA",
+            "KO",
+            "TRV"
+        ]
+    },
+    "ROP": {
+        "basic": {
+            "latest_price": 590.3599853515625,
+            "recent_activity": 411900.0
+        },
+        "intermediate": {
+            "short_term_trend": 578.9855041503906,
+            "long_term_trend": 573.7300024414062
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "SYY",
+            "CMCSA",
+            "D",
+            "MCD",
+            "RTX",
+            "CL",
+            "HON",
+            "WELL",
+            "DUK",
+            "UNH"
+        ]
+    },
+    "COF": {
+        "basic": {
+            "latest_price": 182.17999267578125,
+            "recent_activity": 3577800.0
+        },
+        "intermediate": {
+            "short_term_trend": 173.87249908447265,
+            "long_term_trend": 189.50222290039062
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "WMT",
+            "HD",
+            "JPM",
+            "AXP",
+            "COST",
+            "C",
+            "PNC",
+            "USB",
+            "GS",
+            "LOW"
+        ]
+    },
+    "MAR": {
+        "basic": {
+            "latest_price": 242.55999755859375,
+            "recent_activity": 1717600.0
+        },
+        "intermediate": {
+            "short_term_trend": 245.40749893188476,
+            "long_term_trend": 269.61217498779297
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "PYPL",
+            "AMZN",
+            "CDW",
+            "META",
+            "NVDA",
+            "GOOGL",
+            "ISRG",
+            "NOW",
+            "DIS",
+            "TGT"
+        ]
+    },
+    "DG": {
+        "basic": {
+            "latest_price": 90.19999694824219,
+            "recent_activity": 4955100.0
+        },
+        "intermediate": {
+            "short_term_trend": 82.60349960327149,
+            "long_term_trend": 77.15559967041015
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "MNST",
+            "AIG",
+            "BRK-B",
+            "BRO",
+            "T",
+            "CI",
+            "CB",
+            "XOM",
+            "HCA",
+            "ORLY"
+        ]
+    },
+    "KLAC": {
+        "basic": {
+            "latest_price": 686.1900024414062,
+            "recent_activity": 789100.0
+        },
+        "intermediate": {
+            "short_term_trend": 698.4454925537109,
+            "long_term_trend": 722.5503210449219
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "PCAR",
+            "AME",
+            "CAT",
+            "MSFT",
+            "AMD",
+            "TXN",
+            "XYL",
+            "RMD",
+            "PLD",
+            "FTNT"
+        ]
+    },
+    "IDXX": {
+        "basic": {
+            "latest_price": 426.25,
+            "recent_activity": 532500.0
+        },
+        "intermediate": {
+            "short_term_trend": 421.2049987792969,
+            "long_term_trend": 436.5383966064453
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BA",
+            "AAPL",
+            "TT",
+            "SYK",
+            "FDX",
+            "BLK",
+            "HUM",
+            "SCHW",
+            "NFLX",
+            "EL"
+        ]
+    },
+    "ITW": {
+        "basic": {
+            "latest_price": 252.42999267578125,
+            "recent_activity": 980200.0
+        },
+        "intermediate": {
+            "short_term_trend": 253.8747802734375,
+            "long_term_trend": 256.4161972045898
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BDX",
+            "ZTS",
+            "GE",
+            "ECL",
+            "MMM",
+            "GM",
+            "DE",
+            "PSA",
+            "MDT",
+            "CSCO"
+        ]
+    },
+    "KMB": {
+        "basic": {
+            "latest_price": 142.89999389648438,
+            "recent_activity": 1845500.0
+        },
+        "intermediate": {
+            "short_term_trend": 140.89299926757812,
+            "long_term_trend": 136.2250440979004
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "OTIS",
+            "KO",
+            "TRV",
+            "SO",
+            "DUK",
+            "F",
+            "CL",
+            "CME",
+            "WELL",
+            "GILD"
+        ]
+    },
+    "ECL": {
+        "basic": {
+            "latest_price": 253.66000366210938,
+            "recent_activity": 1054400.0
+        },
+        "intermediate": {
+            "short_term_trend": 254.73248977661132,
+            "long_term_trend": 255.90911590576172
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "GE",
+            "PSA",
+            "ITW",
+            "MMM",
+            "DE",
+            "GM",
+            "IBM",
+            "ZTS",
+            "BDX",
+            "PG"
+        ]
+    },
+    "PH": {
+        "basic": {
+            "latest_price": 628.97998046875,
+            "recent_activity": 785400.0
+        },
+        "intermediate": {
+            "short_term_trend": 620.838998413086,
+            "long_term_trend": 653.9290173339843
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "EL",
+            "LOW",
+            "USB",
+            "BAC",
+            "FDX",
+            "APD",
+            "AMP",
+            "AAPL",
+            "NFLX",
+            "FTNT"
+        ]
+    },
+    "AIG": {
+        "basic": {
+            "latest_price": 87.72000122070312,
+            "recent_activity": 4943700.0
+        },
+        "intermediate": {
+            "short_term_trend": 83.44852485656739,
+            "long_term_trend": 78.99426086425781
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "MNST",
+            "BRK-B",
+            "BRO",
+            "CI",
+            "T",
+            "CB",
+            "XOM",
+            "HCA",
+            "ORLY",
+            "CVX"
+        ]
+    },
+    "HUM": {
+        "basic": {
+            "latest_price": 265.79998779296875,
+            "recent_activity": 1117300.0
+        },
+        "intermediate": {
+            "short_term_trend": 262.37687225341796,
+            "long_term_trend": 268.81363189697265
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BLK",
+            "MA",
+            "SYK",
+            "SCHW",
+            "TT",
+            "CSCO",
+            "MSCI",
+            "IDXX",
+            "ZTS",
+            "V"
+        ]
+    },
+    "MNST": {
+        "basic": {
+            "latest_price": 59.36000061035156,
+            "recent_activity": 4631000.0
+        },
+        "intermediate": {
+            "short_term_trend": 56.81950016021729,
+            "long_term_trend": 52.765999984741214
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "AIG",
+            "BRO",
+            "BRK-B",
+            "CI",
+            "T",
+            "CB",
+            "DG",
+            "XOM",
+            "CVX",
+            "HCA"
+        ]
+    },
+    "TT": {
+        "basic": {
+            "latest_price": 347.94000244140625,
+            "recent_activity": 1017300.0
+        },
+        "intermediate": {
+            "short_term_trend": 345.2589996337891,
+            "long_term_trend": 355.37580017089846
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "IDXX",
+            "BA",
+            "HUM",
+            "SYK",
+            "BLK",
+            "AAPL",
+            "SCHW",
+            "MA",
+            "FDX",
+            "ZTS"
+        ]
+    },
+    "ORLY": {
+        "basic": {
+            "latest_price": 1417.010009765625,
+            "recent_activity": 397500.0
+        },
+        "intermediate": {
+            "short_term_trend": 1359.436505126953,
+            "long_term_trend": 1333.1368041992187
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "HCA",
+            "XOM",
+            "CVX",
+            "WELL",
+            "F",
+            "PAYX",
+            "TRV",
+            "KO",
+            "OTIS",
+            "T"
+        ]
+    },
+    "SYY": {
+        "basic": {
+            "latest_price": 75.30000305175781,
+            "recent_activity": 3069600.0
+        },
+        "intermediate": {
+            "short_term_trend": 73.75550003051758,
+            "long_term_trend": 73.16980010986327
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "ROP",
+            "CMCSA",
+            "D",
+            "MCD",
+            "RTX",
+            "HON",
+            "CL",
+            "WELL",
+            "UNH",
+            "DUK"
+        ]
+    },
+    "VFC": {
+        "basic": {
+            "latest_price": 16.389999389648438,
+            "recent_activity": 5184200.0
+        },
+        "intermediate": {
+            "short_term_trend": 16.760663509368896,
+            "long_term_trend": 21.73501678466797
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "WST",
+            "AVGO",
+            "TGT",
+            "NOW",
+            "TSLA",
+            "PYPL",
+            "MAR",
+            "GOOGL",
+            "META",
+            "NVDA"
+        ]
+    },
+    "TRV": {
+        "basic": {
+            "latest_price": 264.489990234375,
+            "recent_activity": 1048300.0
+        },
+        "intermediate": {
+            "short_term_trend": 259.6968452453613,
+            "long_term_trend": 251.4223080444336
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "KO",
+            "OTIS",
+            "F",
+            "KMB",
+            "SO",
+            "DUK",
+            "CVX",
+            "WELL",
+            "CL",
+            "CME"
+        ]
+    },
+    "DLR": {
+        "basic": {
+            "latest_price": 148.67999267578125,
+            "recent_activity": 2164400.0
+        },
+        "intermediate": {
+            "short_term_trend": 148.1879005432129,
+            "long_term_trend": 157.3950015258789
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "SBUX",
+            "AMP",
+            "BAC",
+            "PNC",
+            "TFC",
+            "DOV",
+            "FTNT",
+            "APD",
+            "USB",
+            "C"
+        ]
+    },
+    "OTIS": {
+        "basic": {
+            "latest_price": 103.94000244140625,
+            "recent_activity": 1922600.0
+        },
+        "intermediate": {
+            "short_term_trend": 102.12600021362304,
+            "long_term_trend": 99.0465544128418
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "KO",
+            "TRV",
+            "KMB",
+            "F",
+            "DUK",
+            "SO",
+            "CL",
+            "WELL",
+            "CVX",
+            "RTX"
+        ]
+    },
+    "PCAR": {
+        "basic": {
+            "latest_price": 99.08999633789062,
+            "recent_activity": 2001200.0
+        },
+        "intermediate": {
+            "short_term_trend": 100.79249954223633,
+            "long_term_trend": 104.4516862487793
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "KLAC",
+            "CAT",
+            "MSFT",
+            "AME",
+            "AMD",
+            "TXN",
+            "XYL",
+            "RMD",
+            "FTNT",
+            "PLD"
+        ]
+    },
+    "CTAS": {
+        "basic": {
+            "latest_price": 208.6699981689453,
+            "recent_activity": 1612500.0
+        },
+        "intermediate": {
+            "short_term_trend": 198.56600112915038,
+            "long_term_trend": 201.24334930419923
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "UNH",
+            "FIS",
+            "PAYX",
+            "EOG",
+            "D",
+            "HON",
+            "SYY",
+            "ROP",
+            "EW",
+            "ORLY"
+        ]
+    },
+    "HCA": {
+        "basic": {
+            "latest_price": 347.0299987792969,
+            "recent_activity": 1249400.0
+        },
+        "intermediate": {
+            "short_term_trend": 331.95391540527345,
+            "long_term_trend": 325.8200146484375
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "ORLY",
+            "XOM",
+            "CVX",
+            "PAYX",
+            "WELL",
+            "F",
+            "T",
+            "CB",
+            "TRV",
+            "KO"
+        ]
+    },
+    "AMP": {
+        "basic": {
+            "latest_price": 494.3599853515625,
+            "recent_activity": 461000.0
+        },
+        "intermediate": {
+            "short_term_trend": 491.88599548339846,
+            "long_term_trend": 520.3294470214844
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "BAC",
+            "DLR",
+            "SBUX",
+            "APD",
+            "FTNT",
+            "PNC",
+            "PH",
+            "USB",
+            "EL",
+            "AMD"
+        ]
+    },
+    "PAYX": {
+        "basic": {
+            "latest_price": 154.94000244140625,
+            "recent_activity": 1421900.0
+        },
+        "intermediate": {
+            "short_term_trend": 148.7490005493164,
+            "long_term_trend": 148.48237091064453
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "UNH",
+            "CTAS",
+            "D",
+            "WELL",
+            "ORLY",
+            "SYY",
+            "HCA",
+            "ROP",
+            "FIS",
+            "CMCSA"
+        ]
+    },
+    "WELL": {
+        "basic": {
+            "latest_price": 153.0800018310547,
+            "recent_activity": 2464300.0
+        },
+        "intermediate": {
+            "short_term_trend": 149.35299911499024,
+            "long_term_trend": 146.4146566772461
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CL",
+            "F",
+            "OTIS",
+            "DUK",
+            "KO",
+            "TRV",
+            "SO",
+            "CVX",
+            "KMB",
+            "MCD"
+        ]
+    },
+    "MSCI": {
+        "basic": {
+            "latest_price": 575.9600219726562,
+            "recent_activity": 481900.0
+        },
+        "intermediate": {
+            "short_term_trend": 561.6984985351562,
+            "long_term_trend": 576.3484252929687
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "SPGI",
+            "SCHW",
+            "MA",
+            "BLK",
+            "EW",
+            "SYK",
+            "HUM",
+            "V",
+            "EOG",
+            "CSCO"
+        ]
+    },
+    "FIS": {
+        "basic": {
+            "latest_price": 75.73999786376953,
+            "recent_activity": 2732800.0
+        },
+        "intermediate": {
+            "short_term_trend": 72.6502471923828,
+            "long_term_trend": 74.02710052490234
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "EOG",
+            "UNH",
+            "CTAS",
+            "D",
+            "HON",
+            "EW",
+            "PAYX",
+            "SPGI",
+            "MSCI",
+            "V"
+        ]
+    },
+    "STZ": {
+        "basic": {
+            "latest_price": 182.72999572753906,
+            "recent_activity": 2193300.0
+        },
+        "intermediate": {
+            "short_term_trend": 182.34100036621095,
+            "long_term_trend": 177.3402883911133
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "RTX",
+            "MCD",
+            "CL",
+            "SO",
+            "DUK",
+            "ICE",
+            "CMCSA",
+            "AON",
+            "KMB",
+            "CME"
+        ]
+    },
+    "MTD": {
+        "basic": {
+            "latest_price": 1172.5,
+            "recent_activity": 131700.0
+        },
+        "intermediate": {
+            "short_term_trend": 1216.3055053710937,
+            "long_term_trend": 1275.9270043945312
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "TMO",
+            "DIS",
+            "ADBE",
+            "ADI",
+            "DOV",
+            "NVDA",
+            "PCAR",
+            "CDW",
+            "KLAC",
+            "MSFT"
+        ]
+    },
+    "MCHP": {
+        "basic": {
+            "latest_price": 48.93000030517578,
+            "recent_activity": 6404700.0
+        },
+        "intermediate": {
+            "short_term_trend": 52.575500106811525,
+            "long_term_trend": 54.93860237121582
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NKE",
+            "TMO",
+            "ADBE",
+            "MTD",
+            "GOOGL",
+            "NVDA",
+            "ADI",
+            "META",
+            "DIS",
+            "PYPL"
+        ]
+    },
+    "FTNT": {
+        "basic": {
+            "latest_price": 98.08000183105469,
+            "recent_activity": 3433700.0
+        },
+        "intermediate": {
+            "short_term_trend": 98.19049987792968,
+            "long_term_trend": 102.72440002441407
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "APD",
+            "RMD",
+            "AMD",
+            "NFLX",
+            "CAT",
+            "MSFT",
+            "PLD",
+            "AMP",
+            "FDX",
+            "BAC"
+        ]
+    },
+    "CDW": {
+        "basic": {
+            "latest_price": 164.47000122070312,
+            "recent_activity": 859300.0
+        },
+        "intermediate": {
+            "short_term_trend": 166.72799911499024,
+            "long_term_trend": 180.44296447753905
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "AMZN",
+            "DIS",
+            "META",
+            "MAR",
+            "PYPL",
+            "NVDA",
+            "DOV",
+            "ADBE",
+            "ISRG",
+            "TFC"
+        ]
+    },
+    "DOV": {
+        "basic": {
+            "latest_price": 179.02000427246094,
+            "recent_activity": 869900.0
+        },
+        "intermediate": {
+            "short_term_trend": 180.77850036621095,
+            "long_term_trend": 192.0691668701172
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "SBUX",
+            "DLR",
+            "DIS",
+            "AMP",
+            "TFC",
+            "AMD",
+            "MSFT",
+            "BAC",
+            "CAT",
+            "CDW"
+        ]
+    },
+    "AME": {
+        "basic": {
+            "latest_price": 172.72000122070312,
+            "recent_activity": 2488100.0
+        },
+        "intermediate": {
+            "short_term_trend": 176.5520034790039,
+            "long_term_trend": 181.7354309082031
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "KLAC",
+            "XYL",
+            "PCAR",
+            "TXN",
+            "CAT",
+            "MSFT",
+            "AMD",
+            "LLY",
+            "PLD",
+            "RMD"
+        ]
+    },
+    "XYL": {
+        "basic": {
+            "latest_price": 119.05000305175781,
+            "recent_activity": 2648400.0
+        },
+        "intermediate": {
+            "short_term_trend": 122.42799949645996,
+            "long_term_trend": 125.28022399902343
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "AME",
+            "KLAC",
+            "TXN",
+            "PCAR",
+            "LLY",
+            "PFE",
+            "CAT",
+            "MSFT",
+            "AMD",
+            "ADI"
+        ]
+    },
+    "WST": {
+        "basic": {
+            "latest_price": 221.5,
+            "recent_activity": 979200.0
+        },
+        "intermediate": {
+            "short_term_trend": 227.4014991760254,
+            "long_term_trend": 259.232497253418
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Medium"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "TGT",
+            "NOW",
+            "AVGO",
+            "PYPL",
+            "MAR",
+            "GOOGL",
+            "META",
+            "NVDA",
+            "AMZN",
+            "CDW"
+        ]
+    },
+    "RMD": {
+        "basic": {
+            "latest_price": 223.0,
+            "recent_activity": 625100.0
+        },
+        "intermediate": {
+            "short_term_trend": 223.48150100708008,
+            "long_term_trend": 232.49830108642578
+        },
+        "expert": {
+            "trend_direction": "Downward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Bad",
+        "recommendations": [
+            "NFLX",
+            "PLD",
+            "APD",
+            "FTNT",
+            "FDX",
+            "CAT",
+            "AMD",
+            "MSFT",
+            "BA",
+            "EL"
+        ]
+    },
+    "BRO": {
+        "basic": {
+            "latest_price": 124.2300033569336,
+            "recent_activity": 2024400.0
+        },
+        "intermediate": {
+            "short_term_trend": 120.42350006103516,
+            "long_term_trend": 114.3117431640625
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "CI",
+            "BRK-B",
+            "T",
+            "CB",
+            "XOM",
+            "AIG",
+            "CVX",
+            "GILD",
+            "F",
+            "TRV"
+        ]
+    },
+    "CHD": {
+        "basic": {
+            "latest_price": 108.31999969482422,
+            "recent_activity": 2056300.0
+        },
+        "intermediate": {
+            "short_term_trend": 108.98849983215332,
+            "long_term_trend": 107.74077011108399
+        },
+        "expert": {
+            "trend_direction": "Upward",
+            "risk_factor": "Low"
+        },
+        "investment_advice": "Good",
+        "recommendations": [
+            "PEP",
+            "LMT",
+            "NEE",
+            "AON",
+            "PG",
+            "PSA",
+            "IBM",
+            "ICE",
+            "DE",
+            "MMM"
+        ]
+    }
+}
