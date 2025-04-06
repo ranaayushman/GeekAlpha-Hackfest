@@ -25,6 +25,18 @@ const initialStocks = [
   { name: 'TSLA', value: 150 }
 ];
 
+// Mock risk analysis data - will be fetched from backend in actual implementation
+const mockRiskAnalysis = {
+  'AAPL': { trustScore: 4.5, riskLevel: 'LOW', investmentAdvice: 'Good' },
+  'MSFT': { trustScore: 4.2, riskLevel: 'LOW', investmentAdvice: 'Good' },
+  'GOOGL': { trustScore: 4.0, riskLevel: 'MEDIUM', investmentAdvice: 'Good' },
+  'AMZN': { trustScore: 3.8, riskLevel: 'MEDIUM', investmentAdvice: 'Good' },
+  'TSLA': { trustScore: 2.5, riskLevel: 'HIGH', investmentAdvice: 'Bad' },
+  'NVDA': { trustScore: 4.3, riskLevel: 'LOW', investmentAdvice: 'Good' },
+  'META': { trustScore: 3.0, riskLevel: 'HIGH', investmentAdvice: 'Bad' },
+  'NFLX': { trustScore: 3.5, riskLevel: 'MEDIUM', investmentAdvice: 'Good' }
+};
+
 const generateTimeSeriesData = (timeRange) => {
   const data = [];
   const endDate = new Date();
@@ -100,11 +112,46 @@ const generateTimeSeriesData = (timeRange) => {
   return data;
 };
 
+// Helper function to render trust score as stars
+const renderStars = (score) => {
+  const fullStars = Math.floor(score);
+  const halfStar = score % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+  
+  return (
+    <div className="flex">
+      {[...Array(fullStars)].map((_, i) => (
+        <span key={`full-${i}`} className="text-yellow-400">★</span>
+      ))}
+      {halfStar && <span className="text-yellow-400">★</span>}
+      {[...Array(emptyStars)].map((_, i) => (
+        <span key={`empty-${i}`} className="text-gray-400">★</span>
+      ))}
+    </div>
+  );
+};
+
+// Helper function to render risk level indicator
+const renderRiskLevel = (level) => {
+  let color = "bg-green-500";
+  if (level === "MEDIUM") color = "bg-yellow-500";
+  if (level === "HIGH") color = "bg-red-500";
+  
+  return (
+    <div className="flex items-center gap-2">
+      <div className={`w-3 h-3 rounded-full ${color}`}></div>
+      <span>{level}</span>
+    </div>
+  );
+};
+
 const Charts = () => {
   const [stocks, setStocks] = useState(initialStocks);
   const [recommendedStocks, setRecommendedStocks] = useState(initialStocks);
   const [selectedTimeRange, setSelectedTimeRange] = useState('1yr');
   const [timeSeriesData, setTimeSeriesData] = useState([]);
+  const [companyToAnalyze, setCompanyToAnalyze] = useState('');
+  const [riskAnalysis, setRiskAnalysis] = useState(null);
 
   // Generate time series data when time range changes
   useEffect(() => {
@@ -146,6 +193,36 @@ const Charts = () => {
     // Regenerate time series data for the selected time range
     const data = generateTimeSeriesData(selectedTimeRange);
     setTimeSeriesData(data);
+  };
+
+  const handleRiskAnalysis = () => {
+    // In a real implementation, this would fetch data from your backend
+    if (companyToAnalyze && companyToAnalyze.trim() !== '') {
+      const ticker = companyToAnalyze.toUpperCase();
+      
+      // Simulate API call delay
+      setTimeout(() => {
+        // Check if we have mock data for this company
+        if (mockRiskAnalysis[ticker]) {
+          setRiskAnalysis({
+            company: ticker,
+            ...mockRiskAnalysis[ticker]
+          });
+        } else {
+          // Default to a random risk analysis if company not found
+          const randomScore = (Math.random() * 4 + 1).toFixed(1);
+          const levels = ['LOW', 'MEDIUM', 'HIGH'];
+          const randomLevel = levels[Math.floor(Math.random() * levels.length)];
+          
+          setRiskAnalysis({
+            company: ticker,
+            trustScore: parseFloat(randomScore),
+            riskLevel: randomLevel,
+            investmentAdvice: parseFloat(randomScore) > 3 ? 'Good' : 'Bad'
+          });
+        }
+      }, 500);
+    }
   };
 
   const topPerformer = stocks.reduce((max, stock) => 
@@ -214,6 +291,68 @@ const Charts = () => {
 
   return (
     <div className="space-y-12">
+      {/* Risk Analysis Section */}
+      <div className="bg-gray-800 rounded-xl p-6">
+        <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Risk Analysis</h2>
+        
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex-1">
+            <div className="mb-6">
+              <label className="block text-gray-300 text-sm mb-1">
+                Company for which you need recommendation
+              </label>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={companyToAnalyze}
+                  onChange={(e) => setCompanyToAnalyze(e.target.value)}
+                  placeholder="Enter stock ticker (e.g., AAPL)"
+                  className="bg-gray-700 text-white px-4 py-2 rounded-lg flex-1"
+                  maxLength={5}
+                />
+                <button
+                  onClick={handleRiskAnalysis}
+                  className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300"
+                >
+                  Analyze
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex-1">
+            {riskAnalysis ? (
+              <div className="bg-gray-700 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-white mb-2">{riskAnalysis.company} Analysis</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300">Trust Score:</span>
+                    {renderStars(riskAnalysis.trustScore)}
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300">Risk Level:</span>
+                    {renderRiskLevel(riskAnalysis.riskLevel)}
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300">Investment Advice:</span>
+                    <span className={`font-medium ${riskAnalysis.investmentAdvice === 'Good' ? 'text-green-400' : 'text-red-400'}`}>
+                      {riskAnalysis.investmentAdvice}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center h-32 bg-gray-700 rounded-lg">
+                <p className="text-gray-400">Enter a company ticker to see risk analysis</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Recommended Stocks Section */}
       <div className="bg-gray-800 rounded-xl p-6">
         <div className="mb-6">
           <h2 className="text-2xl font-semibold mb-4 text-yellow-400">RECOMMENDED STOCKS</h2>
@@ -287,6 +426,7 @@ const Charts = () => {
         </div>
       </div>
 
+      {/* Stock Performance Comparison Section */}
       <div className="bg-gray-800 rounded-xl p-6">
         <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Stock Performance Comparison</h2>
         <div className="h-[400px] w-full">
